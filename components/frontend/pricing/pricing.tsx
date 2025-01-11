@@ -75,7 +75,10 @@ export default function Pricing() {
   const [period, setPeriod] = useState<"monthly" | "yearly">("monthly");
 
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50 px-4 py-24">
+    <section
+      id="pricing"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50 px-4 py-24"
+    >
       <div className="relative flex w-full max-w-7xl flex-col items-center justify-center gap-12">
         <div className="text-center">
           <SmallTitle title="Pricing Plas" />
