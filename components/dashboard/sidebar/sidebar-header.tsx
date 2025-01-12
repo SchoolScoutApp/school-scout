@@ -31,8 +31,8 @@ import {
 import React from "react";
 
 const user = {
-  name: "shadcn",
-  email: "m@example.com",
+  name: "Hemilton",
+  email: "admin@hemilton.com",
   avatar: "/avatars/shadcn.jpg",
 };
 

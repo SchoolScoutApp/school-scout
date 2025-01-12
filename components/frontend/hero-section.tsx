@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative flex min-h-[80vh] flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50 px-4">
+    <section className="relative flex min-h-[60vh] flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50 px-4">
       <div className="relative max-w-6xl mx-auto flex w-full max-w-5xl flex-col items-center justify-center gap-8 text-center">
         <SmallTitle title="Welcome to School Scout" />
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import dashboard from "@/assets/images/dashboard.jpg";
+import dashboard from "@/assets/images/dashboard.png";
 
 import { Card, CardContent } from "@/components/ui/card";
 
