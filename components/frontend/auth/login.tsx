@@ -1,8 +1,6 @@
 "use client";
-import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import TextInput from "@/components/frontend/FormInputs/TextInput";
 import SubmitButton from "@/components/frontend/FormInputs/SubmitButton";
 import CustomCarousel from "../custom-carousal";
@@ -23,9 +21,9 @@ export default function LoginForm() {
     handleSubmit,
     formState: { errors },
   } = useForm<RegisterInputProps>();
-  const router = useRouter();
   async function onSubmit(data: RegisterInputProps) {
     console.log(data);
+    setIsLoading(true);
   }
   return (
     <div className="w-full lg:grid h-screen lg:min-h-[600px] lg:grid-cols-2 relative ">

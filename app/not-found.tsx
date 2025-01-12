@@ -14,8 +14,8 @@ export default function NotFound() {
         </h1>
 
         <p className="mb-8 text-neutral-600">
-          Oops! The page you're looking for doesn't exist. It might have been
-          moved or deleted.
+          Oops! The page you&#39re looking for doesn&#39t exist. It might have
+          been moved or deleted.
         </p>
 
         <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">

@@ -1,5 +1,4 @@
 import { createUploadthing, type FileRouter } from "uploadthing/next";
-import { UploadThingError } from "uploadthing/server";
 
 const f = createUploadthing();
 
@@ -7,7 +6,7 @@ const f = createUploadthing();
 export const ourFileRouter = {
   // Define as many FileRoutes as you like, each with a unique routeSlug
   categoryImage: f({ image: { maxFileSize: "1MB" } }).onUploadComplete(
-    async ({ metadata, file }) => {
+    async ({ file }) => {
       console.log("file url", file.url);
       return { uploadedBy: "JB" };
     }
@@ -33,7 +32,7 @@ export const ourFileRouter = {
     // Archive types
     "application/gzip": { maxFileSize: "1MB", maxFileCount: 4 },
     "application/zip": { maxFileSize: "1MB", maxFileCount: 4 },
-  }).onUploadComplete(async ({ metadata, file }) => {
+  }).onUploadComplete(async ({ file }) => {
     console.log("file url", file.url);
     return { uploadedBy: "JB" };
   }),
@@ -58,7 +57,7 @@ export const ourFileRouter = {
     // Archive types
     "application/gzip": { maxFileSize: "1MB", maxFileCount: 4 },
     "application/zip": { maxFileSize: "1MB", maxFileCount: 4 },
-  }).onUploadComplete(async ({ metadata, file }) => {
+  }).onUploadComplete(async ({ file }) => {
     console.log("file url", file.url);
     return { uploadedBy: "JB" };
   }),
