@@ -1,21 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import TextInput from "./FormInputs/TextInput";
-import { Mail, Search, Send } from "lucide-react";
-import PasswordInput from "./FormInputs/PasswordInput";
+import { Send } from "lucide-react";
 import SubmitButton from "./FormInputs/SubmitButton";
 import TextArea from "./FormInputs/TextAreaInput";
 import PhoneInput from "./FormInputs/PhoneInput";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "../ui/select";
+
 import { countries } from "@/data/countries";
-import { Input } from "../ui/input";
 import CountrySelect from "./FormInputs/CountryDropDown";
 
 type RegisterInputProps = {
@@ -28,8 +20,6 @@ type RegisterInputProps = {
 const ContactUs: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [phoneCode, setPhoneCode] = useState("");
-  const [selectedCountry, setSelectedCountry] = useState(countries[73]);
-  const [searchQuery, setSearchQuery] = useState("");
 
   const {
     register,
@@ -46,12 +36,6 @@ const ContactUs: React.FC = () => {
       setIsLoading(false);
     }, 2000);
   }
-
-  const filteredCountries = countries.filter(
-    (country) =>
-      country.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      country.dial_code.includes(searchQuery)
-  );
 
   return (
     <section className="bg-gray-100 py-16 px-4">

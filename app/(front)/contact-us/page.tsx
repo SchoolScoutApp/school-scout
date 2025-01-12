@@ -11,7 +11,7 @@ export default function page() {
             <SmallTitle title="Contact US" />
 
             <h2 className="mt-6 max-w-4xl text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl lg:text-6xl">
-              Let's get started with School Scout
+              Let&#39s get started with School Scout
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-600">
