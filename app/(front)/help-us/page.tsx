@@ -1,4 +1,4 @@
-import ContactUs from "@/components/frontend/contact-us";
+import HelpUs from "@/components/frontend/help-us";
 import SmallTitle from "@/components/frontend/small-title";
 import React from "react";
 
@@ -11,7 +11,7 @@ export default function page() {
             <SmallTitle title="Contact US" />
 
             <h2 className="mt-6 max-w-4xl text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl lg:text-6xl">
-              Let&#39;s get started with School Scout
+              Do you have questions?
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-600">
@@ -20,7 +20,7 @@ export default function page() {
               educational institutions.
             </p>
           </div>
-          <ContactUs />
+          <HelpUs />
         </div>
       </section>
     </div>

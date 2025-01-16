@@ -64,7 +64,7 @@ export default function PhoneInput({
       <div className="flex space-x-2 items-center">
         <label
           htmlFor={name}
-          className="block text-sm font-medium leading-6 text-gray-900"
+          className="block text-base font-medium leading-6 text-gray-900"
         >
           {label}
         </label>
@@ -96,7 +96,7 @@ export default function PhoneInput({
               }
             }}
           >
-            <SelectTrigger className="w-[110px] border-r-0 rounded-r-none">
+            <SelectTrigger className="w-[100px] border-r-0 rounded-r-none">
               <SelectValue>
                 <span className="flex items-center gap-2">
                   <span>{selectedCountry.flag}</span>

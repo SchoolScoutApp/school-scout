@@ -5,9 +5,9 @@ import React from "react";
 export default function page() {
   return (
     <div>
-      <h2>Students</h2>
+      <h2>Teachers</h2>
       <Button asChild>
-        <Link href={"/dashboard/students/new"}>New Student</Link>
+        <Link href={"/dashboard/staff/teachers/new"}>New Teacher</Link>
       </Button>
     </div>
   );

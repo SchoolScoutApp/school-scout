@@ -39,11 +39,11 @@ const user = {
 export default function SidebarHeader() {
   const [searchQuery, setSearchQuery] = React.useState("");
   return (
-    <div className="flex h-16 items-center gap-4 border-b px-4">
+    <div className="flex h-16 items-center gap-4 border-b px-4 bg-background">
       <SidebarTrigger />
       <div className="flex-1">
         <Input
-          placeholder="Search products..."
+          placeholder="Search ..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="max-w-sm"

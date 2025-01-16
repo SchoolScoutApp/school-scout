@@ -24,7 +24,7 @@ export default function ImageInput({
         <div className="grid gap-2">
           <Image
             alt={title}
-            className="h-40 w-full rounded-md object-cover"
+            className="h-40 w-full rounded-md object-fit"
             height="300"
             src={imageUrl}
             width="300"
