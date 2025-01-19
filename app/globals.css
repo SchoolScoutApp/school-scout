@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("./variable.css");
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f2f4f7;
+  background-color: var(--bg-color);
   font-size: 14px;
 }
 

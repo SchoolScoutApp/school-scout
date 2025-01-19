@@ -1,0 +1,17 @@
+.hero_section {
+  background-image: url("../../assets/images/banner-bgs/banner-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero_section_content {
+  background-color: rgba(255, 255, 255, 0);
+  min-width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner_heading {
+  background: rgba(255, 255, 255, 0.5);
+}

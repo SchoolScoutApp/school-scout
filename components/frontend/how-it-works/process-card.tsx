@@ -24,8 +24,8 @@ export default function ProcessCard({
       viewport={{ once: true }}
       className="relative flex flex-col items-center p-6 text-center"
     >
-      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
-        <Icon className="h-8 w-8 text-primary" />
+      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-sky-50">
+        <Icon className="h-8 w-8 text-sky-700" />
       </div>
 
       {/* Connection line */}
@@ -33,7 +33,7 @@ export default function ProcessCard({
         <div className="absolute left-[calc(50%+4rem)] top-1/2 hidden h-px w-[calc(100%-8rem)] -translate-y-1/2 bg-neutral-200 lg:block" />
       )}
 
-      <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-lg font-semibold text-white">
+      <div className="mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-sky-600 text-lg font-semibold text-white">
         {index + 1}
       </div>
 

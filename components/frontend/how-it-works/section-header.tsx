@@ -26,7 +26,7 @@ export default function SectionHeader({
         {badge}
       </div>
 
-      <h2 className="mt-6 text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl">
+      <h2 className="mt-6 text-4xl font-medium tracking-tight text-sky-950 sm:text-5xl">
         {title}
       </h2>
 

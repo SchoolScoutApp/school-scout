@@ -71,7 +71,7 @@ export default function Testimonials() {
         <div className="text-center">
           <SmallTitle title="Testimonials" />
 
-          <h2 className="mt-6 text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl">
+          <h2 className="mt-6 text-4xl font-medium tracking-tight text-sky-950 sm:text-5xl">
             Words from our users
           </h2>
 
@@ -93,7 +93,7 @@ export default function Testimonials() {
           </div>
 
           <div className="flex flex-col gap-8">
-            <TestimonialCard {...testimonials[2]} />
+            <TestimonialCard {...testimonials[3]} />
             <TestimonialCard {...testimonials[5]} />
           </div>
         </div>

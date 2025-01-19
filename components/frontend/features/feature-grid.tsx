@@ -39,8 +39,8 @@ function FeatureCard({
       }}
       className="overflow-hidden rounded-2xl bg-white p-6 shadow-lg"
     >
-      <h3 className="mb-2 text-xl font-semibold text-neutral-900">{title}</h3>
-      <p className="mb-4 text-base text-neutral-600">{description}</p>
+      <h3 className="mb-2 text-xl font-semibold text-sky-950">{title}</h3>
+      <p className="mb-4 text-base text-sky-900">{description}</p>
       {children}
     </motion.div>
   );
@@ -147,16 +147,19 @@ export default function FeatureGrid() {
   ];
 
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50 px-4 py-24">
+    <section
+      id="features"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-white to-gray-50 px-4 py-24"
+    >
       <div className="relative flex w-full max-w-7xl flex-col items-center justify-center gap-12">
         <div className="text-center">
           <SmallTitle title="Top Features" />
 
-          <h2 className="mt-6 max-w-4xl text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl lg:text-6xl">
+          <h2 className="mt-6 max-w-4xl text-4xl font-medium tracking-tight text-sky-950 sm:text-5xl lg:text-6xl">
             All in one School Management Platform
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-600">
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-sky-900">
             Streamline your entire school operations with our comprehensive
             suite of integrated modules designed specifically for modern
             educational institutions.

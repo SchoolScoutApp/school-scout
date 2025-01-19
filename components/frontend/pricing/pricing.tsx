@@ -9,6 +9,7 @@ const plans = [
   {
     title: "Starter",
     price: "Free",
+    yearlyPrice: "Free",
     description:
       "Perfect for small schools getting started with digital management.",
     priceDescription: "per student/month",
@@ -27,7 +28,9 @@ const plans = [
   },
   {
     title: "Professional",
-    price: "₹399",
+    price: 399,
+    yearlyPrice: "3999",
+
     priceDescription: "per student/month",
     description:
       "Ideal for growing schools needing comprehensive management tools.",
@@ -49,7 +52,8 @@ const plans = [
   },
   {
     title: "Enterprise",
-    price: "₹999*",
+    price: 999,
+    yearlyPrice: "9999*",
     priceDescription: "contact for pricing",
     description:
       "Perfect for large schools and districts requiring custom solutions.",
@@ -80,7 +84,7 @@ export default function Pricing() {
         <div className="text-center" id="pricing">
           <SmallTitle title="Pricing Plas" />
 
-          <h2 className="mt-6 text-4xl font-medium tracking-tight text-neutral-950 sm:text-5xl">
+          <h2 className="mt-6 text-4xl font-medium tracking-tight text-sky-950 sm:text-5xl">
             Our pricing plans
           </h2>
 

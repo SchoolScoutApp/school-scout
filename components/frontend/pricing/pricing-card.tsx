@@ -18,9 +18,10 @@ export function PricingCard({
   highlighted = false,
   period,
 }: PricingCardProps) {
-  const yearlyPrice = parseFloat(price) * 0.8;
-  const displayPrice = period === "yearly" ? yearlyPrice : price;
   const isFreePlan = price === "Free";
+
+  const yearlyPrice = parseInt(price) * 10 + 9;
+  const displayPrice = period === "yearly" ? yearlyPrice : price;
 
   return (
     <div
@@ -38,15 +39,19 @@ export function PricingCard({
             <span className="text-4xl font-semibold">Free</span>
           ) : (
             <>
-              <span className="text-4xl font-semibold">{displayPrice}</span>
-              <span className="ml-1 text-neutral-600">/month</span>
+              <span className="text-4xl font-semibold">
+                &#8377;{displayPrice}
+              </span>
+              <span className="ml-1 text-neutral-600">
+                /{period === "yearly" ? "year" : "month"}
+              </span>
             </>
           )}
         </div>
         <p className="mt-2 text-neutral-600">{description}</p>
       </div>
 
-      <button className="mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-neutral-800">
+      <button className="mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-sky-7                      00 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-neutral-800">
         {isFreePlan ? "Try for free" : "Get started"}
         <ArrowRight className="h-4 w-4" />
       </button>

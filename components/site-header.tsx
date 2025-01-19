@@ -60,70 +60,70 @@ const features = [
       "Integrated messaging system with announcements, emergency alerts, and parent-teacher communication channels",
     href: "/features/communication",
   },
-  {
-    icon: ClipboardList,
-    title: "Staff Management",
-    description:
-      "Efficiently manage staff records, attendance, performance evaluations, and professional development tracking",
-    href: "/features/staff",
-  },
-  {
-    icon: DollarSign,
-    title: "Financial Operations",
-    description:
-      "Comprehensive fee management with online payments, invoicing, expense tracking, and financial reporting",
-    href: "/features/finance",
-  },
-  {
-    icon: Bus,
-    title: "Transport System",
-    description:
-      "Real-time vehicle tracking, route optimization, and automated alerts for safe and efficient student transportation",
-    href: "/features/transport",
-  },
-  {
-    icon: BarChart2,
-    title: "Analytics Dashboard",
-    description:
-      "Powerful data visualization and reporting tools for informed decision-making and performance tracking",
-    href: "/features/analytics",
-  },
-  {
-    icon: BookOpen,
-    title: "Resource Management",
-    description:
-      "Digital library system, inventory control, and facility scheduling with comprehensive tracking capabilities",
-    href: "/features/resources",
-  },
-  {
-    icon: CalendarDays,
-    title: "Attendance System",
-    description:
-      "Automated attendance tracking for students and staff with instant notifications and detailed reporting",
-    href: "/features/attendance",
-  },
-  {
-    icon: FileText,
-    title: "Examination Portal",
-    description:
-      "End-to-end examination management from scheduling to result publication with secure assessment tools",
-    href: "/features/exams",
-  },
+  // {
+  //   icon: ClipboardList,
+  //   title: "Staff Management",
+  //   description:
+  //     "Efficiently manage staff records, attendance, performance evaluations, and professional development tracking",
+  //   href: "/features/staff",
+  // },
+  // {
+  //   icon: DollarSign,
+  //   title: "Financial Operations",
+  //   description:
+  //     "Comprehensive fee management with online payments, invoicing, expense tracking, and financial reporting",
+  //   href: "/features/finance",
+  // },
+  // {
+  //   icon: Bus,
+  //   title: "Transport System",
+  //   description:
+  //     "Real-time vehicle tracking, route optimization, and automated alerts for safe and efficient student transportation",
+  //   href: "/features/transport",
+  // },
+  // {
+  //   icon: BarChart2,
+  //   title: "Analytics Dashboard",
+  //   description:
+  //     "Powerful data visualization and reporting tools for informed decision-making and performance tracking",
+  //   href: "/features/analytics",
+  // },
+  // {
+  //   icon: BookOpen,
+  //   title: "Resource Management",
+  //   description:
+  //     "Digital library system, inventory control, and facility scheduling with comprehensive tracking capabilities",
+  //   href: "/features/resources",
+  // },
+  // {
+  //   icon: CalendarDays,
+  //   title: "Attendance System",
+  //   description:
+  //     "Automated attendance tracking for students and staff with instant notifications and detailed reporting",
+  //   href: "/features/attendance",
+  // },
+  // {
+  //   icon: FileText,
+  //   title: "Examination Portal",
+  //   description:
+  //     "End-to-end examination management from scheduling to result publication with secure assessment tools",
+  //   href: "/features/exams",
+  // },
 
-  {
-    icon: Bell,
-    title: "Notice Board",
-    description:
-      "Digital announcement system for events, updates, and notifications with targeted distribution capabilities",
-    href: "/features/notifications",
-  },
-  {
-    icon: Shield,
-    title: "Security & Access",
-    description:
-      "Advanced role-based access control with data encryption and automated backups for complete security",
-    href: "/features/security",
-  },
+  // {
+  //   icon: Bell,
+  //   title: "Notice Board",
+  //   description:
+  //     "Digital announcement system for events, updates, and notifications with targeted distribution capabilities",
+  //   href: "/features/notifications",
+  // },
+  // {
+  //   icon: Shield,
+  //   title: "Security & Access",
+  //   description:
+  //     "Advanced role-based access control with data encryption and automated backups for complete security",
+  //   href: "/features/security",
+  // },
 ];
 
 export default function MantineHeader() {
@@ -196,11 +196,11 @@ export default function MantineHeader() {
                   Pricing
                 </Link>
                 <Link
-                  href="/how-it-works"
+                  href="/help-us"
                   className="px-4 py-2 text-lg font-medium hover:bg-accent"
                   onClick={() => setOpen(false)}
                 >
-                  How it Works
+                  Need Help ?
                 </Link>
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-4 border-t bg-background">
@@ -248,12 +248,6 @@ export default function MantineHeader() {
                     <div className="w-[800px] p-4">
                       <div className="flex items-center justify-between mb-4 pb-2 border-b">
                         <h4 className="text-lg font-medium">Features</h4>
-                        <Link
-                          href="/features"
-                          className="text-sm text-blue-500 hover:underline"
-                        >
-                          View all
-                        </Link>
                       </div>
                       <div className="grid gap-4 md:grid-cols-3">
                         {features.map((feature, index) => (
@@ -307,9 +301,9 @@ export default function MantineHeader() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link href="/how-it-works" legacyBehavior passHref>
+                  <Link href="/help-us" legacyBehavior passHref>
                     <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                      How it Works
+                      Need Help ?
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>

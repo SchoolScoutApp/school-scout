@@ -54,14 +54,14 @@ export default function HowItWorks() {
         </div>
 
         <div className="mt-12 flex flex-col items-center gap-8 rounded-2xl bg-primary/5 p-8 text-center lg:p-12">
-          <h3 className="text-2xl font-semibold text-primary">
+          <h3 className="text-2xl font-semibold text-sky-600">
             Ready to Transform Your School Management?
           </h3>
           <p className="max-w-2xl text-neutral-600">
             Join thousands of schools already using our platform to streamline
             their operations and improve educational outcomes.
           </p>
-          <button className="rounded-full bg-primary px-8 py-3 font-medium text-white transition-colors hover:bg-primary/90">
+          <button className="rounded-full bg-sky-700 px-8 py-3 font-medium text-white transition-colors hover:bg-primary/90">
             Get Started
           </button>
         </div>

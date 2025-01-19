@@ -26,6 +26,7 @@
     "@tanstack/react-table": "^8.20.6",
     "@uploadthing/react": "^7.1.5",
     "add": "^2.0.6",
+    "aos": "^2.3.4",
     "badge": "^1.0.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

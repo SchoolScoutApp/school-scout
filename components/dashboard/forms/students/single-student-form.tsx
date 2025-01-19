@@ -17,6 +17,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { InfoBanner } from "@/components/banner";
 import { bloodGroup, classes, genders, sections } from "@/data/user-form";
+import { Building2, User } from "lucide-react";
 
 export type SelectOptionProps = {
   label: string;
@@ -145,7 +146,7 @@ export default function SingleStudentForm({
           message="Please create the items on prior like Classes, Section etc."
         />
       </div>
-      <form className="" onSubmit={handleSubmit(saveStudent)}>
+      <form onSubmit={handleSubmit(saveStudent)} className="space-y-8">
         <FormHeader
           href="/dashboard/students"
           parent=""
@@ -154,10 +155,13 @@ export default function SingleStudentForm({
           loading={loading}
         />
 
-        <div className="grid grid-cols-12 gap-6 py-8">
+        <div className="grid grid-cols-12 gap-6">
           <div className="lg:col-span-12 col-span-full space-y-3">
             <div className="grid gap-6">
-              <h3>Student&39;s Details</h3>
+              <h2 className="text-xl font-semibold flex items-center gap-2">
+                <User className="h-5 w-5" />
+                Basic Information
+              </h2>
               <div className="grid md:grid-cols-2 gap-3">
                 <TextInput
                   register={register}

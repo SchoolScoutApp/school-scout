@@ -6,7 +6,7 @@ import Logo from "./logo";
 
 export default function SiteFooter() {
   return (
-    <footer className="w-full bg-[#2563ebe6] text-white">
+    <footer className="w-full bg-sky-600 text-white flex justify-center flex-col">
       <div className="container px-4 py-16 md:px-6">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
@@ -22,28 +22,28 @@ export default function SiteFooter() {
                 href="#"
                 className="rounded-full bg-white p-2 hover:bg-white/90"
               >
-                <Twitter className="h-4 w-4 text-[#6366F1]" />
+                <Twitter className="h-4 w-4 text-sky-600" />
                 <span className="sr-only">Twitter</span>
               </Link>
               <Link
                 href="#"
                 className="rounded-full bg-white p-2 hover:bg-white/90"
               >
-                <Instagram className="h-4 w-4 text-[#6366F1]" />
+                <Instagram className="h-4 w-4 text-sky-600" />
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
                 href="#"
                 className="rounded-full bg-white p-2 hover:bg-white/90"
               >
-                <Linkedin className="h-4 w-4 text-[#6366F1]" />
+                <Linkedin className="h-4 w-4 text-sky-600" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
                 href="#"
                 className="rounded-full bg-white p-2 hover:bg-white/90"
               >
-                <Youtube className="h-4 w-4 text-[#6366F1]" />
+                <Youtube className="h-4 w-4 text-sky-600" />
                 <span className="sr-only">YouTube</span>
               </Link>
             </div>
@@ -51,9 +51,9 @@ export default function SiteFooter() {
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Get In Touch</h3>
             <div className="space-y-2 text-sm">
-              <p>support@pagedone.com</p>
-              <p>+91 945 658 3256</p>
-              <p>61-A, Elm street, Gujarat, India.</p>
+              <p>schooscoutindia@gmail.com</p>
+              <p>+91-860-55-74447</p>
+              <p>Airport road, Viman Nagar, Pune, India 411014.</p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-2">
@@ -101,7 +101,7 @@ export default function SiteFooter() {
                 type="email"
               />
               <Button
-                className="w-full bg-white text-[#6366F1] hover:bg-white/90"
+                className="w-full bg-white text-sky-600 hover:bg-white/90"
                 type="submit"
               >
                 Subscribe
@@ -124,7 +124,7 @@ export default function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="container flex flex-col items-center justify-center gap-4 py-6 text-center text-sm md:h-16 md:flex-row md:py-0">
           <div className="text-white/60">
-            Copyright@2023 All Right Reserved Pagedone.
+            Copyright@2025 All Right Reserved School Scout.
           </div>
         </div>
       </div>

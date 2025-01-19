@@ -1,0 +1,7 @@
+:root {
+  --white: #fff;
+  --bg-color: #f2f4f7;
+  --dark-gray: #6b7280;
+
+  --input-border: var(--dark-gray);
+}

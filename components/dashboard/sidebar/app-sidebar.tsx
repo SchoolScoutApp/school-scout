@@ -11,6 +11,7 @@ import {
   LayoutDashboard,
   // MessageSquare,
   // Settings,
+  School,
   Users,
 } from "lucide-react";
 
@@ -48,6 +49,18 @@ const NAVBAR_ITEMS = [
     ],
   },
   {
+    title: "School Management",
+    url: "/dashboard",
+    icon: School,
+    isActive: true,
+    items: [
+      {
+        title: "All Schools",
+        url: "/dashboard/schools",
+      },
+    ],
+  },
+  {
     title: "Student Management",
     url: "/students",
     icon: Users,
@@ -74,7 +87,7 @@ const NAVBAR_ITEMS = [
     title: "Staff Management",
     url: "/dashboard/staff",
     icon: ClipboardList,
-    isActive: true,
+    // isActive: true,
     items: [
       {
         title: "Teachers",
@@ -98,7 +111,7 @@ const NAVBAR_ITEMS = [
     title: "Academics",
     url: "/dashboard/academics",
     icon: GraduationCap,
-    isActive: true,
+    // isActive: true,
     items: [
       {
         title: "Classes",

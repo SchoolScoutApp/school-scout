@@ -19,14 +19,14 @@ export default function Logo({ type = "light" }: { type: "light" | "dark" }) {
   }
   return (
     <Link href={"/"} className="flex items-center space-x-2">
-      <div className="bg-blue-500 rounded-full p-1">
+      <div className="bg-sky-600 rounded-full p-1">
         <span className="text-white font-bold text-xl">
           <GraduationCap />
         </span>
       </div>
       <span className="font-bold text-xl">
         School
-        <span className="text-blue-500"> Scout</span>
+        <span className="text-neutral-600"> Scout</span>
       </span>
     </Link>
   );
