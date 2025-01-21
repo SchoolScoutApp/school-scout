@@ -5,11 +5,11 @@ import {
   Upload,
   Building2,
   Mail,
-  Phone,
+  // Phone,
   MapPin,
-  Globe,
+  // Globe,
   School,
-  Users,
+  // Users,
   BadgeCheck,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
@@ -44,7 +44,7 @@ interface SchoolFormData {
   planCategory: string;
 }
 
-const SchoolOnboarding: React.FC = ({ editingId, initialData }: any) => {
+const SchoolOnboarding: React.FC = ({ editingId }: any) => {
   const [loading, setLoading] = useState(false);
 
   const [formData, setFormData] = useState<SchoolFormData>({
@@ -409,7 +409,7 @@ const SchoolOnboarding: React.FC = ({ editingId, initialData }: any) => {
         <div className="flex justify-end">
           <button
             type="submit"
-            className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
+            className="bg-sky-600 text-white px-6 py-2 rounded hover:bg-sky-700 transition-colors"
           >
             Register School
           </button>

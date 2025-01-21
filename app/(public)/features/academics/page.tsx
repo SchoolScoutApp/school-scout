@@ -9,7 +9,7 @@ import {
   Calendar,
   Users,
   Video,
-  Download,
+  // Download,
   Search,
 } from "lucide-react";
 import AOS from "aos";
@@ -125,7 +125,7 @@ const AcademicManagement = () => {
           alt="Modern library interior"
           className="w-full h-full object-cover"
         ></Image>
-        <div className="absolute inset-0 bg-blue-900/60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-sky-900/60 flex items-center justify-center">
           <div className="text-white text-center max-w-4xl px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Modern Academic Management System
@@ -215,7 +215,7 @@ const AcademicManagement = () => {
                     placeholder="Search for books, journals, articles..."
                     className="flex-1 p-3 rounded-l-lg border-2 border-r-0 border-gray-300 focus:outline-none focus:border-blue-500"
                   />
-                  <button className="bg-blue-600 text-white p-3 rounded-r-lg hover:bg-blue-700">
+                  <button className="bg-sky-600 text-white p-3 rounded-r-lg hover:bg-sky-700">
                     <Search className="w-6 h-6" />
                   </button>
                 </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 import {
@@ -11,7 +12,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Input } from "@/components/ui/input";
 import {
   SidebarFooter,
   SidebarMenu,
@@ -19,6 +19,7 @@ import {
   SidebarMenuItem,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
+import { logout } from "@/services/sessions";
 import { AvatarImage } from "@radix-ui/react-avatar";
 import {
   BadgeCheck,
@@ -28,7 +29,6 @@ import {
   LogOut,
   Sparkles,
 } from "lucide-react";
-import React from "react";
 
 const user = {
   name: "Hemilton",
@@ -37,17 +37,16 @@ const user = {
 };
 
 export default function SidebarHeader() {
-  const [searchQuery, setSearchQuery] = React.useState("");
+  // const [searchQuery, setSearchQuery] = React.useState("");
+
+  async function handleLogout() {
+    await logout();
+  }
+
   return (
     <div className="flex h-16 items-center gap-4 border-b px-4 bg-background">
-      <SidebarTrigger />
       <div className="flex-1">
-        <Input
-          placeholder="Search ..."
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="max-w-sm"
-        />
+        <SidebarTrigger />
       </div>
       <SidebarFooter>
         <SidebarMenu>
@@ -112,7 +111,7 @@ export default function SidebarHeader() {
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>
+                <DropdownMenuItem onClick={handleLogout}>
                   <LogOut />
                   Log out
                 </DropdownMenuItem>

@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 
 import {
   // BarChart2,
@@ -35,6 +37,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import Logo from "@/components/logo";
+import { getSession } from "@/services/sessions";
 
 const NAVBAR_ITEMS = [
   {
@@ -272,6 +275,13 @@ const NAVBAR_ITEMS = [
 ];
 
 export default function AppSidebar() {
+  useEffect(() => {
+    (async () => {
+      const sessionData = await getSession();
+      console.log(sessionData);
+    })();
+  }, []);
+
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>

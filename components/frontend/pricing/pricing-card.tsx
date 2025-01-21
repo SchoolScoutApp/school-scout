@@ -3,7 +3,7 @@ import { PricingBadge } from "./pricing-badge";
 
 interface PricingCardProps {
   title: string;
-  price: string;
+  price: string | number;
   description: string;
   features: string[];
   highlighted?: boolean;
@@ -19,8 +19,7 @@ export function PricingCard({
   period,
 }: PricingCardProps) {
   const isFreePlan = price === "Free";
-
-  const yearlyPrice = parseInt(price) * 10 + 9;
+  const yearlyPrice = typeof price === "number" && +price * 10 + 9;
   const displayPrice = period === "yearly" ? yearlyPrice : price;
 
   return (

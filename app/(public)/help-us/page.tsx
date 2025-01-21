@@ -28,8 +28,9 @@ export default function page() {
               Still Confused?
             </h3>
             <p className="text-lg text-sky-950 text-center">
-              Can't find what you're looking for? We're here to help! Reach out
-              to our support team and we'll get back to you within 24 hours.
+              Can&#39;t find what you&#39;re looking for? We&#39;re here to
+              help! Reach out to our support team and we&#39;ll get back to you
+              within 24 hours.
               <br />
               <br />
               <Button>

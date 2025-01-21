@@ -3,10 +3,10 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import TextInput from "@/components/frontend/FormInputs/TextInput";
 import SubmitButton from "@/components/frontend/FormInputs/SubmitButton";
-import CustomCarousel from "../custom-carousal";
 import Logo from "@/components/logo";
 import PasswordInput from "../FormInputs/PasswordInput";
 import { Lock, LogIn, Mail } from "lucide-react";
+import CustomCarousel from "@/components/custom-carousal";
 
 export type RegisterInputProps = {
   fullName: string;

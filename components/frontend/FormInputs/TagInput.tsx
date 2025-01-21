@@ -117,7 +117,7 @@ const TagInput: React.FC<TagInputProps> = ({
           type="button"
           onClick={addTag}
           disabled={disabled || !inputValue.trim()}
-          className="p-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-400 disabled:cursor-not-allowed"
+          className="p-2 text-white bg-sky-500 rounded-md hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-400 disabled:cursor-not-allowed"
           aria-label="Add tag"
         >
           <Plus size={20} />

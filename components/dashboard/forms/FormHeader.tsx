@@ -49,7 +49,7 @@ export default function FormHeader({
           size={"sm"}
           title={editingId ? `Update ${title}` : `Save ${title}`}
           loading={loading}
-          className="bg-blue-600"
+          className="bg-sky-600"
         />
       </div>
     </div>

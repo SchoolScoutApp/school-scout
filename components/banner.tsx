@@ -16,7 +16,7 @@ interface DismissibleBannerProps {
 const bannerConfig = {
   info: {
     icon: Info,
-    bgColor: "bg-blue-50",
+    bgColor: "bg-sky-50",
     textColor: "text-blue-800",
     iconColor: "text-blue-400",
   },

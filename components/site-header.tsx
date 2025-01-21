@@ -19,19 +19,19 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import {
-  DollarSign,
-  Bell,
+  // DollarSign,
+  // Bell,
   Menu,
   Users,
   GraduationCap,
   ClipboardList,
   MessageSquare,
-  Bus,
-  BookOpen,
-  CalendarDays,
-  FileText,
-  BarChart2,
-  Shield,
+  // Bus,
+  // BookOpen,
+  // CalendarDays,
+  // FileText,
+  // BarChart2,
+  // Shield,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
@@ -43,7 +43,7 @@ const features = [
     title: "Student Management",
     description:
       "Complete digital system for student enrollment, profiles, academic tracking, and document management with easy parent access",
-    href: "/features/student-management",
+    href: "/features/students",
   },
   {
     icon: GraduationCap,
@@ -60,13 +60,13 @@ const features = [
       "Integrated messaging system with announcements, emergency alerts, and parent-teacher communication channels",
     href: "/features/communication",
   },
-  // {
-  //   icon: ClipboardList,
-  //   title: "Staff Management",
-  //   description:
-  //     "Efficiently manage staff records, attendance, performance evaluations, and professional development tracking",
-  //   href: "/features/staff",
-  // },
+  {
+    icon: ClipboardList,
+    title: "Staff Management",
+    description:
+      "Efficiently manage staff records, attendance, performance evaluations, and professional development tracking",
+    href: "/features/staff",
+  },
   // {
   //   icon: DollarSign,
   //   title: "Financial Operations",
@@ -169,9 +169,7 @@ export default function MantineHeader() {
                     {features.map((feature, index) => (
                       <Link
                         key={index}
-                        href={`/feature/${feature.title
-                          .toLowerCase()
-                          .replace(/\s+/g, "-")}`}
+                        href={feature.href}
                         className="flex items-start gap-4 py-2"
                         onClick={() => setOpen(false)}
                       >
@@ -194,6 +192,13 @@ export default function MantineHeader() {
                   onClick={() => setOpen(false)}
                 >
                   Pricing
+                </Link>
+                <Link
+                  href="/blogs"
+                  className="px-4 py-2 text-lg font-medium hover:bg-accent"
+                  onClick={() => setOpen(false)}
+                >
+                  Blogs
                 </Link>
                 <Link
                   href="/help-us"
@@ -253,9 +258,7 @@ export default function MantineHeader() {
                         {features.map((feature, index) => (
                           <Link
                             key={index}
-                            href={`/feature/${feature.title
-                              .toLowerCase()
-                              .replace(/\s+/g, "-")}`}
+                            href={feature.href}
                             className="block group"
                           >
                             <div className="flex items-start gap-4">
@@ -300,6 +303,13 @@ export default function MantineHeader() {
                   </Link>
                 </NavigationMenuItem>
 
+                <NavigationMenuItem>
+                  <Link href="/blogs" legacyBehavior passHref>
+                    <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
+                      Blogs
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
                 <NavigationMenuItem>
                   <Link href="/help-us" legacyBehavior passHref>
                     <NavigationMenuLink className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">

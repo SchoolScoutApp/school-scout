@@ -29,8 +29,8 @@ export default function Input({
   value,
   invalid,
   onChange,
-  icon,
-}: iInput) {
+}: // icon,
+iInput) {
   return (
     <>
       <div

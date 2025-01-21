@@ -1,6 +1,8 @@
 "use server";
 import { iUser } from "@/interfaces/user";
 import { cookies } from "next/headers";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 export async function createSession(userData: iUser) {
   const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000); // 1 Week
@@ -44,4 +46,10 @@ export async function login(email: string, password: string) {
       "Content-Type": "application/json",
     },
   });
+}
+
+export async function logout() {
+  await destroySession();
+  revalidatePath("/", "layout");
+  redirect("/login");
 }

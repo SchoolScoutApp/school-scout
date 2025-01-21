@@ -81,7 +81,7 @@ const ParentCommunication = () => {
           alt="Parent and teacher meeting"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-blue-900/60 flex items-center justify-center">
+        <div className="absolute inset-0 bg-sky-900/60 flex items-center justify-center">
           <div className="text-white text-center max-w-4xl px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Seamless Parent-School Communication
@@ -100,12 +100,12 @@ const ParentCommunication = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right">
               <h2 className="text-3xl font-bold mb-6">
-                Stay Connected With Your Child's Education
+                Stay Connected With Your Child&#39;s Education
               </h2>
               <p className="text-gray-600 mb-6">
-                Our communication portal keeps you informed about your child's
-                academic journey, school events, and important announcements in
-                real-time.
+                Our communication portal keeps you informed about your
+                child&#39;s academic journey, school events, and important
+                announcements in real-time.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center text-gray-700">
@@ -179,7 +179,7 @@ const ParentCommunication = () => {
               <MessageSquare className="w-8 h-8 text-blue-600 mx-auto mb-4" />
               <h3 className="font-bold mb-2">Message Teacher</h3>
               <p className="text-gray-600 text-sm">
-                Send a message to your child's teacher
+                Send a message to your child&#39;s teacher
               </p>
             </button>
             <button className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow">
@@ -210,7 +210,7 @@ const ParentCommunication = () => {
       {/* Contact Support */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="bg-blue-50 rounded-lg p-8">
+          <div className="bg-sky-50 rounded-lg p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl font-bold mb-4">Need Help?</h2>
@@ -245,7 +245,7 @@ const ParentCommunication = () => {
                   rows={4}
                   className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
                 ></textarea>
-                <button className="w-full bg-blue-600 text-white py-3 rounded font-bold hover:bg-blue-700 transition-colors">
+                <button className="w-full bg-sky-600 text-white py-3 rounded font-bold hover:bg-sky-700 transition-colors">
                   Send Message
                 </button>
               </form>

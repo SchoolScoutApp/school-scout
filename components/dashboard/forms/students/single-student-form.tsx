@@ -17,7 +17,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { InfoBanner } from "@/components/banner";
 import { bloodGroup, classes, genders, sections } from "@/data/user-form";
-import { Building2, User } from "lucide-react";
+import { User } from "lucide-react";
 
 export type SelectOptionProps = {
   label: string;

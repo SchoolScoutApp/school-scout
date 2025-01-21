@@ -82,7 +82,7 @@ const StudentManagement = () => {
           alt="Students using digital platform"
           className="w-full h-full object-cover"
         ></Image>
-        <div className="absolute inset-0 bg-blue-900/30 flex items-center justify-center">
+        <div className="absolute inset-0 bg-sky-900/30 flex items-center justify-center">
           <div className="text-white text-center max-w-4xl px-4">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Transform Your Educational Institution

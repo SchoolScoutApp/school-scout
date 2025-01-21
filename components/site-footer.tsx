@@ -7,7 +7,7 @@ import Logo from "./logo";
 export default function SiteFooter() {
   return (
     <footer className="w-full bg-sky-600 text-white flex justify-center flex-col">
-      <div className="container px-4 py-16 md:px-6">
+      <div className="container px-4 py-16 md:px-6 m-auto">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -121,7 +121,7 @@ export default function SiteFooter() {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10">
+      <div className="border-t border-white/10  m-auto">
         <div className="container flex flex-col items-center justify-center gap-4 py-6 text-center text-sm md:h-16 md:flex-row md:py-0">
           <div className="text-white/60">
             Copyright@2025 All Right Reserved School Scout.

@@ -4,7 +4,7 @@ import { createSession, login } from "@/services/sessions";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
-export default async function SubmitLogin(prevState: {}, formData: FormData) {
+export default async function SubmitLogin(prevState: any, formData: FormData) {
   const email = formData.get("email")?.toString();
   const password = formData.get("password")?.toString();
   const errors: any = {};
@@ -28,6 +28,8 @@ export default async function SubmitLogin(prevState: {}, formData: FormData) {
 
   const response = await login(email, password);
 
+  console.log(response);
+
   if (!response.ok) {
     errors.invalid_error =
       "Invalid Credentials: Please enter a valid email and password";
@@ -39,6 +41,8 @@ export default async function SubmitLogin(prevState: {}, formData: FormData) {
 
   if (response.ok && response.status === 200) {
     const userData = await response.json();
+    console.log(userData);
+
     createSession(userData);
 
     revalidatePath("/", "layout");
