@@ -12,7 +12,7 @@ import {
   GraduationCap,
   LayoutDashboard,
   MessageSquare,
-  Settings,
+  // Settings,
   School,
   Users,
 } from "lucide-react";
@@ -304,7 +304,7 @@ const NAVBAR_ITEMS: INavbar[] = [
 ];
 
 export default function AppSidebar() {
-  const [navbar, setNavbar] = useState([]);
+  const [navbar, setNavbar] = useState<INavbar[]>([]);
   useEffect(() => {
     (async () => {
       const sessionData = await getSession();
