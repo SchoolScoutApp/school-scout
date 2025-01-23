@@ -20,6 +20,7 @@ import parent_communication from "@/assets/images/public-site/parent-communicati
 import notice_board from "@/assets/images/public-site/notice-board.png";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import contact_support from "@/assets/images/contact-us.png";
 
 interface CommunicationFeature {
   icon: JSX.Element;
@@ -227,28 +228,18 @@ const ParentCommunication = () => {
                     <Mail className="w-5 h-5 mr-3 text-blue-600" />
                     <span>schoolscoutindia@gmail.com</span>
                   </div>
+                  <div className="flex items-center">
+                    <Button>
+                      <Link href="/contact-us">Contact Us</Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
-                />
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
-                />
-                <textarea
-                  placeholder="Your Message"
-                  rows={4}
-                  className="w-full p-3 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
-                ></textarea>
-                <button className="w-full bg-sky-600 text-white py-3 rounded font-bold hover:bg-sky-700 transition-colors">
-                  Send Message
-                </button>
-              </form>
+              <Image
+                src={contact_support}
+                alt="Contact support"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

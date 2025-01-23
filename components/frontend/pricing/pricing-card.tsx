@@ -1,5 +1,7 @@
 import { ArrowRight, Check } from "lucide-react";
 import { PricingBadge } from "./pricing-badge";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface PricingCardProps {
   title: string;
@@ -50,10 +52,12 @@ export function PricingCard({
         <p className="mt-2 text-neutral-600">{description}</p>
       </div>
 
-      <button className="mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-sky-7                      00 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-neutral-800">
-        {isFreePlan ? "Try for free" : "Get started"}
-        <ArrowRight className="h-4 w-4" />
-      </button>
+      <Button className="mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-sky-700 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-sky-800">
+        <Link href="/contact-us" className="flex items-center">
+          {isFreePlan ? "Try for free" : "Get started"}
+          <ArrowRight className="ml-2 h-4 w-4" />
+        </Link>
+      </Button>
 
       <ul className="mt-8 space-y-4">
         {features.map((feature, index) => (

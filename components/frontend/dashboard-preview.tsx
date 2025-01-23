@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import dashboard from "@/assets/images/dashboard.png";
 import { Button } from "../ui/button";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const DashboardPreviewSection = () => {
   return (
@@ -65,20 +67,10 @@ const DashboardPreviewSection = () => {
 
           <div className="mt-8">
             <Button>
-              Schedule a Demo
-              <svg
-                className="ml-2 h-5 w-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
+              <Link href="/contact-us" className="flex items-center">
+                Schedule a Demo
+                <ArrowRight className="ml-2" />
+              </Link>
             </Button>
           </div>
         </div>

@@ -144,7 +144,10 @@ export default function MantineHeader() {
               <SheetHeader className="border-b p-4">
                 <SheetTitle className="text-left">Navigation</SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col py-4" style={{ overflowY: "auto", maxHeight: "calc(100vh - 120px)" }}>
+              <div
+                className="flex flex-col py-4"
+                style={{ overflowY: "auto", maxHeight: "calc(100vh - 120px)" }}
+              >
                 <Link
                   href="/"
                   className="px-4 py-2 text-lg font-medium hover:bg-accent"
@@ -248,53 +251,58 @@ export default function MantineHeader() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger onMouseEnter={() => setShowFeatures(true)}>Features</NavigationMenuTrigger>
+                  <NavigationMenuTrigger
+                    onMouseEnter={() => setShowFeatures(true)}
+                  >
+                    Features
+                  </NavigationMenuTrigger>
                   {showFeatures && (
                     <NavigationMenuContent>
                       <div className="w-[800px] p-4">
                         <div className="flex items-center justify-between mb-4 pb-2 border-b">
-                        <h4 className="text-lg font-medium">Features</h4>
-                      </div>
-                      <div className="grid gap-4 md:grid-cols-3">
-                        {features.map((feature, index) => (
-                          <Link
-                            key={index}
-                            href={feature.href}
-                            className="block group"
-                            onClick={() => setShowFeatures(false)}
-                          >
-                            <div className="flex items-start gap-4">
-                              <div className="p-2 bg-muted rounded-md group-hover:bg-muted/80">
-                                <feature.icon className="h-6 w-6 text-blue-500" />
+                          <h4 className="text-lg font-medium">Features</h4>
+                        </div>
+                        <div className="grid gap-4 md:grid-cols-3">
+                          {features.map((feature, index) => (
+                            <Link
+                              key={index}
+                              href={feature.href}
+                              className="block group"
+                              onClick={() => setShowFeatures(false)}
+                            >
+                              <div className="flex items-start gap-4">
+                                <div className="p-2 bg-muted rounded-md group-hover:bg-muted/80">
+                                  <feature.icon className="h-6 w-6 text-blue-500" />
+                                </div>
+                                <div>
+                                  <h5 className="font-medium mb-1 group-hover:text-blue-500">
+                                    {feature.title}
+                                  </h5>
+                                  <p className="text-sm text-muted-foreground line-clamp-2">
+                                    {feature.description}
+                                  </p>
+                                </div>
                               </div>
-                              <div>
-                                <h5 className="font-medium mb-1 group-hover:text-blue-500">
-                                  {feature.title}
-                                </h5>
-                                <p className="text-sm text-muted-foreground line-clamp-2">
-                                  {feature.description}
-                                </p>
-                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="mt-6 pt-4 border-t">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <h4 className="font-medium mb-1">Get started</h4>
+                              <p className="text-sm text-muted-foreground">
+                                Building stronger connections between parents
+                                and educators for student success
+                              </p>
                             </div>
-                          </Link>
-                        ))}
-                      </div>
-                      <div className="mt-6 pt-4 border-t">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <h4 className="font-medium mb-1">Get started</h4>
-                            <p className="text-sm text-muted-foreground">
-                              Their food sources have decreased, and their
-                              numbers
-                            </p>
+                            <Button variant="secondary" asChild>
+                              <Link href={"/contact-us"}>Get started</Link>
+                            </Button>
                           </div>
-                          <Button variant="secondary" asChild>
-                            <Link href={"/contact-us"}>Get started</Link>
-                          </Button>
                         </div>
                       </div>
-                    </div>
-                  </NavigationMenuContent>)}
+                    </NavigationMenuContent>
+                  )}
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
