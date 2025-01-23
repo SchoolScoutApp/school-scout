@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   // BarChart2,
@@ -11,8 +11,8 @@ import {
   // DollarSign,
   GraduationCap,
   LayoutDashboard,
-  // MessageSquare,
-  // Settings,
+  MessageSquare,
+  Settings,
   School,
   Users,
 } from "lucide-react";
@@ -39,7 +39,19 @@ import {
 import Logo from "@/components/logo";
 import { getSession } from "@/services/sessions";
 
-const NAVBAR_ITEMS = [
+interface INavbar {
+  title: string;
+  url: string;
+  icon: any;
+  items: {
+    title: string;
+    url: string;
+  }[];
+  allowedUsers: string[];
+  isActive?: boolean;
+}
+
+const NAVBAR_ITEMS: INavbar[] = [
   {
     title: "Dashboard",
     url: "/dashboard",
@@ -50,6 +62,7 @@ const NAVBAR_ITEMS = [
         url: "/dashboard",
       },
     ],
+    allowedUsers: ["ADMIN", "SCHOOL_ADMIN", "STAFF"],
   },
   {
     title: "School Management",
@@ -62,6 +75,7 @@ const NAVBAR_ITEMS = [
         url: "/dashboard/schools",
       },
     ],
+    allowedUsers: ["ADMIN"],
   },
   {
     title: "Student Management",
@@ -85,6 +99,7 @@ const NAVBAR_ITEMS = [
       //   url: "dashboard/students/attendance",
       // },
     ],
+    allowedUsers: ["SCHOOL_ADMIN"],
   },
   {
     title: "Staff Management",
@@ -109,6 +124,7 @@ const NAVBAR_ITEMS = [
       //   url: "/dashboard/staff/performance",
       // },
     ],
+    allowedUsers: ["SCHOOL_ADMIN"],
   },
   {
     title: "Academics",
@@ -133,6 +149,7 @@ const NAVBAR_ITEMS = [
       //   url: "/academics/report-cards",
       // },
     ],
+    allowedUsers: ["SCHOOL_ADMIN"],
   },
   // {
   //   title: "Communication",
@@ -249,6 +266,18 @@ const NAVBAR_ITEMS = [
   //     },
   //   ],
   // },
+  {
+    title: "Enquiries",
+    url: "/dashboard/enquiries",
+    icon: MessageSquare,
+    items: [
+      {
+        title: "All Enquiries",
+        url: "/dashboard/enquiries",
+      },
+    ],
+    allowedUsers: ["ADMIN", "SCHOOL_ADMIN"],
+  },
   // {
   //   title: "Settings",
   //   url: "/settings",
@@ -275,10 +304,19 @@ const NAVBAR_ITEMS = [
 ];
 
 export default function AppSidebar() {
+  const [navbar, setNavbar] = useState([]);
   useEffect(() => {
     (async () => {
       const sessionData = await getSession();
-      console.log(sessionData);
+      const userType = sessionData.userType;
+      const userNavbarItems = NAVBAR_ITEMS.filter((item) => {
+        if (item.allowedUsers.includes(userType)) {
+          return item;
+        }
+      });
+      setNavbar(() => {
+        return userNavbarItems;
+      });
     })();
   }, []);
 
@@ -294,7 +332,7 @@ export default function AppSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarMenu>
-            {NAVBAR_ITEMS.map((item) => (
+            {navbar.map((item) => (
               <Collapsible
                 key={item.title}
                 asChild

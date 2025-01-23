@@ -30,7 +30,6 @@ import * as React from "react";
 //   TableRow,
 // } from "@/components/ui/table";
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { getSession } from "@/services/sessions";
 // const salesData = [
 //   { name: "Sun", value: 0 },
 //   { name: "Mon", value: 0 },
@@ -94,16 +93,6 @@ import { getSession } from "@/services/sessions";
 // ];
 
 export default function Dashboard() {
-  const [session, setSession] = React.useState(null);
-  React.useEffect(() => {
-    (async () => {
-      const sessionData = await getSession();
-      setSession(sessionData);
-      if (session) {
-        // Do This
-      }
-    })();
-  }, [session]);
   return (
     <div className="flex-1 space-y-4 p-4">
       {/* <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">

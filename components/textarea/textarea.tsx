@@ -1,7 +1,6 @@
-import classes from "./input.module.css";
+import classes from "./textarea.module.css";
 
-interface iInput {
-  type?: string;
+interface iTextarea {
   id?: string;
   name?: string;
   className?: string;
@@ -15,10 +14,11 @@ interface iInput {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => void;
   icon?: string;
+  rows?: number;
+  cols?: number;
 }
 
-export default function Input({
-  type,
+export default function Textarea({
   id,
   name,
   className,
@@ -29,8 +29,10 @@ export default function Input({
   value,
   invalid,
   onChange,
+  rows,
+  cols,
 }: // icon,
-iInput) {
+iTextarea) {
   return (
     <>
       <div
@@ -38,13 +40,8 @@ iInput) {
           invalid && invalid.length > 0 && "invalid"
         }`}
       >
-        {label && (
-          <label>
-            {required && <span className="text-red-500">*</span>} {label}
-          </label>
-        )}
-        <input
-          type={type || "text"}
+        {label && <label>{label}</label>}
+        <textarea
           id={id}
           name={name}
           className={`${classes.input} ${className}`}
@@ -53,7 +50,9 @@ iInput) {
           required={!!required}
           value={value}
           onChange={onChange}
-        />
+          rows={rows || 3}
+          cols={cols || 30}
+        ></textarea>
         {invalid && invalid.length > 0 && (
           <div className={classes.input_error}>{invalid}</div>
         )}

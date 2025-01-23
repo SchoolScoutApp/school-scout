@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Loader, Plus } from "lucide-react";
 import React from "react";
@@ -25,28 +26,28 @@ export default function SubmitButton({
   return (
     <>
       {loading ? (
-        <button
+        <Button
           type="button"
           disabled
           className={cn(
-            "items-center flex justify-center rounded-md bg-indigo-600/55 px-3 py-2 text-sm font-semibold leading-6 text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 cursor-not-allowed",
+            "items-center flex justify-center rounded-md bg-sky-600/55 px-3 py-2 text-sm font-semibold leading-6 text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 cursor-not-allowed",
             className
           )}
         >
           <LoaderIcon className="w-4 h-4 animate-spin mr-2" />
           {loadingTitle}
-        </button>
+        </Button>
       ) : (
-        <button
+        <Button
           type="submit"
           className={cn(
-            "flex items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
+            "flex items-center justify-center rounded-md bg-sky-600 px-3 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
             className
           )}
         >
           {showIcon && <ButtonIcon className="w-4 h-4 mr-2" />}
           {title}
-        </button>
+        </Button>
       )}
     </>
   );

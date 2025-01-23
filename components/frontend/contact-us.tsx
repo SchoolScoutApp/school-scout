@@ -1,148 +1,104 @@
 "use client";
-import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import TextInput from "./FormInputs/TextInput";
+import React from "react";
 import { Send } from "lucide-react";
 import SubmitButton from "./FormInputs/SubmitButton";
-import TextArea from "./FormInputs/TextAreaInput";
-import PhoneInput from "./FormInputs/PhoneInput";
 
 import { countries } from "@/data/countries";
-import CountrySelect from "./FormInputs/CountryDropDown";
+import Input from "../input/input";
+import Select from "../select/select";
+import Textarea from "../textarea/textarea";
 
-type RegisterInputProps = {
-  fullName: string;
-  email: string;
-  password: string;
-  phone: string;
-};
 
 const ContactUs: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [phoneCode, setPhoneCode] = useState("");
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<RegisterInputProps>();
-  async function onSubmit(data: RegisterInputProps) {
-    setIsLoading(true);
-    const phoneNumber = `${phoneCode}-${data.phone}`;
-    data.phone = phoneNumber;
-    console.log(data);
-
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }
-
   return (
-    <section className="bg-gray-100 py-16 px-4">
+    <section className="bg-sky-50 p-16 rounded-2xl">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl lg:text-3xl font-bold mb-2">Contact Us</h2>
-        <p className="text-gray-600 mb-8 pb-4">
-          Streamline your processes and empower your school with our products.
-          Effortlessly manage School System, and more.
-        </p>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="col-span-3 bg-white p-6 rounded-2xl shadow">
-            <h3 className="text-xl font-semibold mb-4">
+          <div className="col-span-3 bg-white p-10 rounded-2xl shadow">
+            <h3 className="text-xl font-semibold mb-10">
               Sign up to get your school onboard
             </h3>
-            <form className="grid gap-4" onSubmit={handleSubmit(onSubmit)}>
-              <TextInput
+            <form className="grid gap-4">
+              <Input
                 label="Full Name"
-                register={register}
                 name="name"
-                errors={errors}
                 placeholder="John Doe"
+                required
               />
               <div className="grid md:grid-cols-2 gap-4">
-                <TextInput
+                <Input
                   label="Email Address"
-                  register={register}
                   name="email"
                   type="email"
-                  errors={errors}
                   placeholder="Eg. johndoe@gmail.com"
+                  required
                 />
-                <PhoneInput
+                <Input
                   label="Phone"
-                  register={register}
                   name="phone"
                   type="text"
-                  errors={errors}
                   placeholder="Eg. 9898767654"
-                  setPhoneCode={setPhoneCode}
+                  required
                 />
               </div>
-
               <div className="grid md:grid-cols-2 gap-4">
-                <TextInput
+                <Input
                   label="School Name"
-                  register={register}
                   name="school"
-                  errors={errors}
                   placeholder="Eg. Bishop's School"
                 />
-
-                <CountrySelect
-                  value={countries[73].code}
+                <Select
+                  label="Country"
                   name="country"
-                  register={register}
-                  errors={errors}
+                  items={countries.map((country) => ({
+                    label: country.name,
+                    value: country.code,
+                    flag: country.flag,
+                  }))}
+                  required
                 />
               </div>
-              <TextArea
+              <Textarea
                 label="Your Address"
-                register={register}
                 name="address"
-                errors={errors}
+                placeholder="Eg. 123, Main Street, City, Country"
+                required
               />
-
               <div className="grid md:grid-cols-2 gap-4">
-                <TextInput
+                <Input
                   label="No of Students"
-                  register={register}
                   name="school-students"
-                  errors={errors}
                   type="number"
                   placeholder="Eg. 1000"
                 />
-                <TextInput
+                <Input
                   label="Social Media"
-                  register={register}
                   name="social"
-                  errors={errors}
                   placeholder="Eg. https://www.facebook.com/schoolscout"
                 />
               </div>
-              <TextInput
+              <Input
                 label="Your Role"
-                register={register}
                 name="role"
-                errors={errors}
                 placeholder="Eg. Principle, Dean"
               />
-              <TextInput
+              <Input
                 label="How did you hear about us?"
-                register={register}
                 name="role"
-                errors={errors}
+                placeholder="Eg. Facebook, Instagram, Twitter"
+                required
               />
-              <TextArea
+              <Textarea
                 label="Your interest? (What are the exact feature you are looking for?)"
-                register={register}
-                name="social"
-                errors={errors}
+                name="interest"
+                placeholder="Eg. Facebook, Instagram, Twitter"
               />
 
               <SubmitButton
                 buttonIcon={Send}
                 title="Submit"
-                loading={isLoading}
+                loading={false}
                 loadingTitle="Sending..."
               />
             </form>

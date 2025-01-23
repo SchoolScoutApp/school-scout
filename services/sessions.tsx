@@ -21,7 +21,7 @@ export async function getSession() {
     return JSON.parse(session.value);
   }
 
-  return session;
+  return null;
 }
 
 export async function updateSession(data: Object) {

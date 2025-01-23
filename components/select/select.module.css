@@ -1,13 +1,14 @@
-.input {
+.select {
   width: 100%;
   padding: 16px;
   border-radius: 4px;
   border: 1px solid var(--input-border);
+  
 }
 
 .input_container {
+  border-radius: 4px;
   position: relative;
-  padding-bottom: 22px;
 }
 
 .input_container label {
@@ -16,11 +17,4 @@
   left: 10px;
   background-color: var(--white);
   padding: 0 5px;
-}
-
-.input_error {
-  width: 100%;
-  color: var(--error-text);
-  position: absolute;
-  font-size: 12px;
 }
