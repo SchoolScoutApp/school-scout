@@ -144,7 +144,7 @@ export default function MantineHeader() {
               <SheetHeader className="border-b p-4">
                 <SheetTitle className="text-left">Navigation</SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col py-4">
+              <div className="flex flex-col py-4" style={{ overflowY: "auto", maxHeight: "calc(100vh - 120px)" }}>
                 <Link
                   href="/"
                   className="px-4 py-2 text-lg font-medium hover:bg-accent"
@@ -248,10 +248,11 @@ export default function MantineHeader() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Features</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-[800px] p-4">
-                      <div className="flex items-center justify-between mb-4 pb-2 border-b">
+                  <NavigationMenuTrigger onMouseEnter={() => setShowFeatures(true)}>Features</NavigationMenuTrigger>
+                  {showFeatures && (
+                    <NavigationMenuContent>
+                      <div className="w-[800px] p-4">
+                        <div className="flex items-center justify-between mb-4 pb-2 border-b">
                         <h4 className="text-lg font-medium">Features</h4>
                       </div>
                       <div className="grid gap-4 md:grid-cols-3">
@@ -260,6 +261,7 @@ export default function MantineHeader() {
                             key={index}
                             href={feature.href}
                             className="block group"
+                            onClick={() => setShowFeatures(false)}
                           >
                             <div className="flex items-start gap-4">
                               <div className="p-2 bg-muted rounded-md group-hover:bg-muted/80">
@@ -292,7 +294,7 @@ export default function MantineHeader() {
                         </div>
                       </div>
                     </div>
-                  </NavigationMenuContent>
+                  </NavigationMenuContent>)}
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
