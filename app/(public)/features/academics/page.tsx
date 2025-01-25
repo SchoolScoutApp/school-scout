@@ -10,14 +10,12 @@ import {
   Users,
   Video,
   // Download,
-  Search,
 } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
 
 import academic from "@/assets/images/public-site/academic.jpg";
-import library from "@/assets/images/public-site/library.jpg";
 import class_mgt from "@/assets/images/public-site/class-mgt.jpg";
 import assignment_mgt from "@/assets/images/public-site/assignment_mgt.jpg";
 import progress_mgt from "@/assets/images/public-site/progress_mgt.png";
