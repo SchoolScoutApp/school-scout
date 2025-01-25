@@ -6,7 +6,6 @@ import HowItWorks from "@/components/frontend/how-it-works/how-it-works";
 import Pricing from "@/components/frontend/pricing/pricing";
 import Testimonials from "@/components/frontend/testimonials/testimonials";
 import React from "react";
-import Loader from "../loading";
 
 export default function Home() {
   return (
