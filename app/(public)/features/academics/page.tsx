@@ -200,52 +200,6 @@ const AcademicManagement = () => {
         </div>
       </section>
 
-      {/* Library Search Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right">
-              <h2 className="text-3xl font-bold mb-6">
-                Advanced Library Search
-              </h2>
-              <div className="bg-gray-100 p-6 rounded-lg">
-                <div className="flex items-center mb-4">
-                  <input
-                    type="text"
-                    placeholder="Search for books, journals, articles..."
-                    className="flex-1 p-3 rounded-l-lg border-2 border-r-0 border-gray-300 focus:outline-none focus:border-blue-500"
-                  />
-                  <button className="bg-sky-600 text-white p-3 rounded-r-lg hover:bg-sky-700">
-                    <Search className="w-6 h-6" />
-                  </button>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <select className="p-2 rounded border border-gray-300">
-                    <option>All Categories</option>
-                    <option>Books</option>
-                    <option>Journals</option>
-                    <option>Research Papers</option>
-                  </select>
-                  <select className="p-2 rounded border border-gray-300">
-                    <option>All Departments</option>
-                    <option>Science</option>
-                    <option>Arts</option>
-                    <option>Engineering</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div data-aos="fade-left" className="relative h-[400px]">
-              <Image
-                src={library}
-                alt="Digital library interface"
-                className="w-full h-full object-cover"
-              ></Image>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Study Materials Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">

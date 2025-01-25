@@ -3,6 +3,8 @@
 import { Users, BookOpen, Calendar, Award } from "lucide-react";
 import SectionHeader from "./section-header";
 import ProcessCard from "./process-card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const steps = [
   {
@@ -61,9 +63,15 @@ export default function HowItWorks() {
             Join thousands of schools already using our platform to streamline
             their operations and improve educational outcomes.
           </p>
-          <button className="rounded-full bg-sky-700 px-8 py-3 font-medium text-white transition-colors hover:bg-primary/90">
+          {/* <button className="rounded-full bg-sky-700 px-8 py-3 font-medium text-white transition-colors hover:bg-primary/90">
             Get Started
-          </button>
+          </button> */}
+          <Button
+            asChild
+            className="rounded-full bg-sky-700 px-8 py-3 font-medium text-white transition-colors hover:bg-sky-600"
+          >
+            <Link href="/contact-us">Get Started</Link>
+          </Button>
         </div>
       </div>
     </section>
