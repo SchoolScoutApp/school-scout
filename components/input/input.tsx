@@ -55,7 +55,7 @@ iInput) {
           onChange={onChange}
         />
         {invalid && invalid.length > 0 && (
-          <div className={classes.input_error}>{invalid}</div>
+          <div className={`${classes.input_error} text-red-500`}>{invalid}</div>
         )}
       </div>
     </>

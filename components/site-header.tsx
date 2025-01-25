@@ -332,10 +332,10 @@ export default function MantineHeader() {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost">
+            <Button variant="ghost" asChild>
               <Link href={"/login"}>Log in</Link>
             </Button>
-            <Button>
+            <Button asChild>
               <Link href={"/contact-us"}>Book Demo</Link>
             </Button>
           </div>

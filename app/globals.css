@@ -165,3 +165,15 @@ body {
       100% calc(100% + 2px);
   }
 }
+
+.loader-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -283,7 +283,10 @@ const AcademicManagement = () => {
             experience to the next level
           </p>
           <div className="space-x-4">
-            <Button className="bg-sky-700 text-white px-6 py-3 rounded-lg hover:bg-sky-800">
+            <Button
+              asChild
+              className="bg-sky-700 text-white px-6 py-3 rounded-lg hover:bg-sky-800"
+            >
               <Link href="/contact-us">Get Started</Link>
             </Button>
           </div>

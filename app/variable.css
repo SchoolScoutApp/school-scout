@@ -4,4 +4,5 @@
   --dark-gray: #6b7280;
 
   --input-border: var(--dark-gray);
+  --error-text: #ef4444;
 }

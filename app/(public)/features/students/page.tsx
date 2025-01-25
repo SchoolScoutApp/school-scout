@@ -154,7 +154,7 @@ const StudentManagement = () => {
             Join thousands of educational institutions already using our
             platform
           </p>
-          <Button>
+          <Button asChild>
             <Link href={"/contact-us"}>Get Started Today</Link>
           </Button>
         </div>
