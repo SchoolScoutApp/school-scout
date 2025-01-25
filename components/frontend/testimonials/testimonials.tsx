@@ -1,17 +1,21 @@
 import SmallTitle from "../small-title";
 import { TestimonialCard } from "./testimonial-card";
 
-import user_priya from "@/assets/images/users/priya.jpg";
+import sunil from "@/assets/images/users/sunil.jpg";
 import user_rajesh from "@/assets/images/users/rajesh.jpg";
 import user_anjali from "@/assets/images/users/anjali.jpg";
+import iteesha from "@/assets/images/users/iteesha.jpg";
+import thomas from "@/assets/images/users/thomas.jpg";
+import fatima from "@/assets/images/users/fatima.jpg";
+import elizabeth from "@/assets/images/users/elizabeth.jpg";
 
 const testimonials = [
   {
     content:
       "This system has revolutionized our administrative processes. The automated attendance and fee management features have reduced our workload by 70%, allowing our staff to focus more on teaching and student development.",
-    name: "Dr. Priya Sharma",
-    role: "Principal",
-    avatar: user_priya,
+    name: "Lect. Iteesha Pandagre",
+    role: "Lecturer/Teacher",
+    avatar: iteesha,
     platform: "twitter" as const,
   },
   {
@@ -27,7 +31,7 @@ const testimonials = [
       "Managing multiple branches was a nightmare before implementing this system. Now, with centralized data and reporting, we can easily monitor performance across all our campuses and make data-driven decisions.",
     name: "Mrs. Anjali Mathur",
     role: "Managing Director",
-    avatar: "/placeholder.svg",
+    avatar: user_anjali,
     platform: "instagram" as const,
   },
   {
@@ -35,7 +39,7 @@ const testimonials = [
       "The examination management module has simplified our entire assessment process. From question paper generation to result analysis, everything is streamlined and secure. It's been a game-changer for our academic team.",
     name: "Mr. Thomas Philip",
     role: "Academic Coordinator",
-    avatar: user_rajesh,
+    avatar: thomas,
     platform: "youtube" as const,
   },
   {
@@ -43,7 +47,7 @@ const testimonials = [
       "As a new school, we needed a system that could grow with us. The scalable nature and comprehensive features have supported our growth from 100 to 1000 students without any operational hiccups.",
     name: "Dr. Fatima Sheikh",
     role: "Founder Principal",
-    avatar: user_priya,
+    avatar: fatima,
     platform: "tiktok" as const,
   },
   {
@@ -51,7 +55,7 @@ const testimonials = [
       "The transport management system with real-time tracking has given our parents peace of mind. The automatic notifications about bus locations and delays have significantly reduced parents' anxiety about student transportation.",
     name: "Mr. Sunil Verma",
     role: "Administrative Head",
-    avatar: user_rajesh,
+    avatar: sunil,
     platform: "instagram" as const,
   },
   {
@@ -59,7 +63,7 @@ const testimonials = [
       "The financial management module has streamlined our fee collection process completely. The automated reminders and online payment integration have improved our collection rate by 40% and reduced accounting work significantly.",
     name: "Mrs. Elizabeth George",
     role: "Finance Director",
-    avatar: user_anjali,
+    avatar: elizabeth,
     platform: "youtube" as const,
   },
 ];
@@ -83,18 +87,18 @@ export default function Testimonials() {
         <div className="mt-8 grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col gap-8">
             <TestimonialCard {...testimonials[0]} />
-            <TestimonialCard {...testimonials[3]} />
-          </div>
-
-          <div className="flex flex-col gap-8">
             <TestimonialCard {...testimonials[1]} />
-            <TestimonialCard {...testimonials[4]} />
-            <TestimonialCard {...testimonials[6]} />
           </div>
 
           <div className="flex flex-col gap-8">
+            <TestimonialCard {...testimonials[2]} />
             <TestimonialCard {...testimonials[3]} />
+            <TestimonialCard {...testimonials[4]} />
+          </div>
+
+          <div className="flex flex-col gap-8">
             <TestimonialCard {...testimonials[5]} />
+            <TestimonialCard {...testimonials[6]} />
           </div>
         </div>
       </div>

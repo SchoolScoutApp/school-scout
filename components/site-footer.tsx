@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+// import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 import Logo from "./logo";
 
@@ -17,7 +17,7 @@ export default function SiteFooter() {
               From admissions to academics, simplify every aspect of school
               administration with our comprehensive and user-friendly platform.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <Link
                 href="#"
                 className="rounded-full bg-white p-2 hover:bg-white/90"
@@ -46,7 +46,7 @@ export default function SiteFooter() {
                 <Youtube className="h-4 w-4 text-sky-600" />
                 <span className="sr-only">YouTube</span>
               </Link>
-            </div>
+            </div> */}
           </div>
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Get In Touch</h3>
@@ -60,35 +60,32 @@ export default function SiteFooter() {
             <div className="space-y-4">
               <h3 className="text-lg font-bold">Quick Links</h3>
               <nav className="flex flex-col space-y-2 text-sm">
-                <Link className="hover:underline" href="#">
+                <Link className="hover:underline" href="/">
                   Home
                 </Link>
-                <Link className="hover:underline" href="#">
+                <Link className="hover:underline" href="/help-us">
                   FAQs
                 </Link>
-                <Link className="hover:underline" href="#">
+                <Link className="hover:underline" href="/#pricing">
                   Price Plan
-                </Link>
-                <Link className="hover:underline" href="#">
-                  Features
                 </Link>
               </nav>
             </div>
             <div className="space-y-4">
               <h3 className="text-lg font-bold invisible">Links</h3>
               <nav className="flex flex-col space-y-2 text-sm">
-                <Link className="hover:underline" href="#">
-                  Careers
+                <Link className="hover:underline" href="/#features">
+                  Features
                 </Link>
-                <Link className="hover:underline" href="#">
+                <Link className="hover:underline" href="/">
                   About
                 </Link>
-                <Link className="hover:underline" href="#">
+                <Link className="hover:underline" href="/contact-us">
                   Contact
                 </Link>
-                <Link className="hover:underline" href="#">
+                {/* <Link className="hover:underline" href="#">
                   Products
-                </Link>
+                </Link> */}
               </nav>
             </div>
           </div>
