@@ -254,7 +254,7 @@ const ParentCommunication = () => {
             your smartphone
           </p>
           <div className="space-x-4">
-            <Button>
+            <Button asChild>
               <Link href={"/contact-us"}>Get Started</Link>
             </Button>
           </div>

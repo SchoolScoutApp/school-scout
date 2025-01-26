@@ -28,11 +28,18 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">
-          <Button className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-medium text-white transition-colors">
-            <Link href="/contact-us">Get Started</Link>
-            <ArrowRight className="h-4 w-4" />
+          <Button
+            className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-medium text-white transition-colors"
+            asChild
+          >
+            <Link href="/contact-us">
+              Get Started <ArrowRight className="h-4 w-4" />
+            </Link>
           </Button>
-          <Button className="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-200 bg-white px-6 py-3 text-base font-medium text-neutral-700 transition-colors hover:bg-neutral-50">
+          <Button
+            asChild
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-200 bg-white px-6 py-3 text-base font-medium text-neutral-700 transition-colors hover:bg-neutral-50"
+          >
             <Link href="#features" className="flex items-center">
               View All features&nbsp;
               <ArrowRight className="h-4 w-4" />

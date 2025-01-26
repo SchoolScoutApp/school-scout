@@ -23,7 +23,7 @@ export default function Select({
 }: iSelect) {
   return (
     <>
-    <div
+      <div
         className={`${classes.input_container} ${
           invalid && invalid.length > 0 && "invalid"
         }`}
@@ -38,21 +38,21 @@ export default function Select({
           name={name}
           className={`${classes.select} ${className}`}
           required={!!required}
-            >
-              <option value="">Select</option>
-              {items &&
-                items.length > 0 &&
-                items.map((item) => (
-                  <option
-                    key={item.value}
-                    value={item.value}
-                    selected={!!selectedValue && !!(selectedValue === item.value)}
-                  >
-                    {item.flag && <span className="mr-2">{item.flag}</span>}
-                    {item.label}
-                  </option>
-                ))}
-            </select>
+        >
+          <option value="">Select</option>
+          {items &&
+            items.length > 0 &&
+            items.map((item) => (
+              <option
+                key={item.value}
+                value={item.value}
+                selected={!!selectedValue && !!(selectedValue === item.value)}
+              >
+                {item.flag && item.flag} &nbsp;
+                {item.label}
+              </option>
+            ))}
+        </select>
         {invalid && invalid.length > 0 && (
           <div className={classes.input_error}>{invalid}</div>
         )}

@@ -1,0 +1,19 @@
+User-agent: *
+Disallow: /login/
+Disallow: /admin/
+Disallow: /user-data/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /private/
+
+Allow: /$
+Allow: /features/
+Allow: /pricing/
+Allow: /blogs/
+Allow: /contact/
+Allow: /about/
+Allow: /faqs/
+Allow: /price-plan/
+Allow:/login/
+
+Sitemap: https://schoolscout.in/sitemap.xml

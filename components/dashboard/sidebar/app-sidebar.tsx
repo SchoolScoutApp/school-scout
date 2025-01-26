@@ -276,7 +276,7 @@ const NAVBAR_ITEMS: INavbar[] = [
         url: "/dashboard/enquiries",
       },
     ],
-    allowedUsers: ["ADMIN", "SCHOOL_ADMIN"],
+    allowedUsers: ["ADMIN"],
   },
   // {
   //   title: "Settings",
