@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export interface BlogPost {
   id: string;
+  slug:string;
   title: string;
   excerpt: string;
   content: string;
@@ -20,7 +21,7 @@ interface BlogCardProps {
 
 export function BlogCard({ post, featured = false }: BlogCardProps) {
   return (
-    <Link href={`/blogs/${post.id}`}>
+    <Link href={`/blogs/${post.slug}`}>
       <article
         className={`group overflow-hidden rounded-lg border bg-white shadow-sm transition-shadow hover:shadow-md ${
           featured ? "lg:grid lg:grid-cols-2 lg:gap-8" : ""
