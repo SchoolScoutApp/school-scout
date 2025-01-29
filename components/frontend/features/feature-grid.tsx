@@ -49,9 +49,9 @@ function FeatureCard({
 export default function FeatureGrid() {
   const features = [
     {
-      title: "Student Information System",
+      title: "Daycare Record System",
       description:
-        "Centralize student records, admissions, and academic tracking with digital profiles and automated enrollment workflows.",
+        " Centralize child records, admissions, and attendance tracking with digital profiles and automated check-in/check-out workflows.",
       content: (
         <div className="rounded-xl bg-neutral-50 p-4">
           <Image
@@ -65,9 +65,9 @@ export default function FeatureGrid() {
       ),
     },
     {
-      title: "Academic Excellence Suite",
+      title: "KidCare Routine Manager",
       description:
-        "Manage curriculum, examinations, grades, and assessments while tracking student progress in real-time",
+        "Manage daily activities, lesson plans, developmental milestones, and progress tracking for every child in real time.",
       content: (
         <div className="rounded-xl bg-neutral-50 p-4">
           <Image
@@ -83,7 +83,7 @@ export default function FeatureGrid() {
     {
       title: "Smart Communication Hub",
       description:
-        "Connect your entire school community with instant messaging, announcements, and emergency alerts across all devices",
+        "Connect parents, staff, and caregivers with instant messaging, daily reports, announcements, and emergency alerts.",
       content: (
         <div className="rounded-xl bg-neutral-50 p-4">
           <Image
@@ -99,7 +99,7 @@ export default function FeatureGrid() {
     {
       title: "Financial Management",
       description:
-        "Streamline fee collection, process online payments, and generate comprehensive financial reports automatically",
+        "Streamline fee collection, process online payments, generate invoices, and manage billing with automated reminders.",
       content: (
         <div className="rounded-xl bg-neutral-50 p-4">
           <Image
@@ -115,7 +115,7 @@ export default function FeatureGrid() {
     {
       title: "Staff & HR Management",
       description:
-        "Handle staff records, attendance, payroll, and performance evaluations in one unified platform",
+        "Handle caregiver records, attendance, payroll, and scheduling with ease.",
       content: (
         <div className="rounded-xl bg-neutral-50 p-4">
           <Image
@@ -131,7 +131,7 @@ export default function FeatureGrid() {
     {
       title: "Analytics & Reporting",
       description:
-        "Make data-driven decisions with powerful insights into academic performance, operations, and financial trends",
+        "Make data-driven decisions with detailed reports on attendance, child development progress, and financial transactions.",
       content: (
         <div className="rounded-xl bg-neutral-50 p-4">
           <Image
@@ -156,13 +156,13 @@ export default function FeatureGrid() {
           <SmallTitle title="Top Features" />
 
           <h2 className="mt-6 max-w-4xl text-4xl font-medium tracking-tight text-sky-950 sm:text-5xl lg:text-6xl">
-            All in one School Management Platform
+            All In One Day Care Management Platform
           </h2>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-sky-900">
-            Streamline your entire school operations with our comprehensive
+            Streamline your entire daycare operations with our comprehensive
             suite of integrated modules designed specifically for modern
-            educational institutions.
+            childcare centers.
           </p>
         </div>
 
