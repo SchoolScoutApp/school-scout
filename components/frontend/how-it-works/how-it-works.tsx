@@ -10,7 +10,7 @@ const steps = [
   {
     title: "Register & Setup",
     description:
-      "Create your school profile, add administrators, teachers, and configure basic settings for your institution.",
+      "Create your child care center profile, add administrators, staff, caregivers and configure basic settings for your day care.",
     icon: Users,
   },
   {

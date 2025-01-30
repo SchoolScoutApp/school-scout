@@ -27,7 +27,7 @@ import Link from "next/link";
 
 const features_recommended = [
   {
-    title: "Class Management",
+    title: "Day care Management",
     description:
       "Streamlined assignment system with deadline tracking, rubric-based grading, plagiarism detection, and detailed feedback mechanisms.",
     image: class_mgt,

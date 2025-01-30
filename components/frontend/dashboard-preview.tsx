@@ -30,7 +30,7 @@ const DashboardPreviewSection = () => {
         <div className="order-2 lg:order-2  col-span-1">
           <div className="space-y-6 text-lg text-gray-600">
             <p>
-              Get a comprehensive view of your entire school&#39;s performance
+              Get a comprehensive view of your entire day care&#39;s performance
               at a glance. Our intuitive dashboard provides real-time insights
               into student progress, financial health, and administrative
               efficiency.
