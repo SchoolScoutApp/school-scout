@@ -30,19 +30,19 @@ const DashboardPreviewSection = () => {
         <div className="order-2 lg:order-2  col-span-1">
           <div className="space-y-6 text-lg text-gray-600">
             <p>
-              Get a comprehensive view of your entire day care&#39;s performance
-              at a glance. Our intuitive dashboard provides real-time insights
-              into student progress, financial health, and administrative
-              efficiency.
+              Effortlessly manage your entire daycare with a powerful,
+              all-in-one dashboard. Gain real-time insights into daily
+              operations, student engagement, and financial performance to
+              streamline decision-making.
             </p>
             <div className="pt-4">
               <ul className="space-y-3">
                 {[
-                  "Real-time data visualization",
-                  "Customizable reporting",
-                  "Performance tracking",
-                  "Financial insights",
-                  "Attendance monitoring",
+                  "Live Activity Tracking",
+                  "Customizable Reports",
+                  "Parent Communication",
+                  "Billing & Payments",
+                  "Staff & Scheduling",
                 ].map((feature, index) => (
                   <li key={index} className="flex items-center">
                     <svg

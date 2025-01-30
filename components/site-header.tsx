@@ -40,31 +40,31 @@ import Logo from "./logo";
 const features = [
   {
     icon: Users,
-    title: "Student Management",
+    title: " Child Management",
     description:
-      "Complete digital system for student enrollment, profiles, academic tracking, and document management with easy parent access",
+      "Complete digital system for child enrollment, profiles, and progress tracking.",
     href: "/features/students",
   },
   {
     icon: GraduationCap,
-    title: "Academic Management",
+    title: "Daily Activity Planning",
     description:
-      "Streamline curriculum planning, class scheduling, examinations, and grade management in one unified platform",
+      "Streamline lesson plans, nap schedules, meal tracking, and daily reports.",
     href: "/features/academics",
   },
 
   {
     icon: MessageSquare,
-    title: "Communication Hub",
+    title: "Parent Communication Hub",
     description:
-      "Integrated messaging system with announcements, emergency alerts, and parent-teacher communication channels",
+      "Integrated messaging system with real-time updates, announcements, and media sharing.",
     href: "/features/communication",
   },
   {
     icon: ClipboardList,
-    title: "Staff Management",
+    title: "Staff & Attendance Management",
     description:
-      "Efficiently manage staff records, attendance, performance evaluations, and professional development tracking",
+      "Efficiently manage caregiver schedules, attendance, and payroll.",
     href: "/features/staff",
   },
   // {
@@ -291,8 +291,8 @@ export default function MantineHeader() {
                             <div>
                               <h4 className="font-medium mb-1">Get started</h4>
                               <p className="text-sm text-muted-foreground">
-                                Building stronger connections between parents
-                                and educators for student success
+                                Build stronger connections between parents and
+                                caregivers for a nurturing learning environment.
                               </p>
                             </div>
                             <Button variant="secondary" asChild>

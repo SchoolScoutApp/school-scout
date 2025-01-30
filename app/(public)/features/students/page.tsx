@@ -24,37 +24,37 @@ const features: FeatureCard[] = [
     icon: "📝",
     title: "Smart Enrollment",
     description:
-      "Streamline the admission process with our digital enrollment system. Handle applications, documentation, and student records efficiently.",
+      "Streamline the enrollment process with a digital system tailored for daycare. Easily manage child applications, medical records, dietary preferences, and documentation.",
   },
   {
     icon: "📊",
     title: "Progress Tracking",
     description:
-      "Monitor academic performance, attendance, and behavioral metrics in real-time. Generate detailed reports and insights.",
+      "Monitor each child’s developmental milestones, daily activities, and behavioral patterns in real-time. Generate detailed progress reports to share with parents.",
   },
   {
     icon: "💰",
     title: "Fee Management",
     description:
-      "Manage tuition fees, generate invoices, and track payments seamlessly. Support multiple payment methods and automated reminders.",
+      "Simplify tuition fee management by automating invoicing, tracking payments, and offering multiple payment options. Include reminders for timely payments.",
   },
   {
     icon: "📱",
     title: "Parent Portal",
     description:
-      "Keep parents informed with real-time updates about their child's progress, attendance, and school activities.",
+      "Keep parents updated with real-time information about their child’s activities, meals, nap schedules, and health. Share photos and videos securely for a personalized experience.",
   },
   {
     icon: "📅",
     title: "Schedule Management",
     description:
-      "Create and manage class schedules, exam timetables, and extra-curricular activities effortlessly.",
+      "Create and manage daily activity schedules, meal plans, and nap times. Ensure a balanced routine that promotes learning, fun, and rest.",
   },
   {
     icon: "📈",
     title: "Analytics Dashboard",
     description:
-      "Get valuable insights with advanced analytics and reporting tools. Make data-driven decisions for better outcomes.",
+      "Use analytics to gain insights into childcare trends, attendance patterns, and developmental progress. Make data-driven decisions to enhance care quality and operational efficiency.",
   },
 ];
 
@@ -85,11 +85,12 @@ const StudentManagement = () => {
         <div className="absolute inset-0 bg-sky-900/30 flex items-center justify-center">
           <div className="text-white text-center max-w-4xl px-4">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Transform Your Educational Institution
+              Transform Your Daycare Center
             </h2>
             <p className="text-xl md:text-2xl">
-              Empower your administration, teachers, and students with
-              cutting-edge management tools
+              Empower your administration, caregivers, and children with
+              cutting-edge management tools to create a safe, nurturing, and
+              enriching environment.
             </p>
           </div>
         </div>
@@ -102,8 +103,7 @@ const StudentManagement = () => {
             Comprehensive Features
           </h2>
           <p className="text-center text-gray-600 mb-12">
-            Everything you need to manage your educational institution
-            effectively
+            Everything you need to manage your day care center effectively.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -148,11 +148,10 @@ const StudentManagement = () => {
       <section className="bg-sky-50 text-sky-950 py-16">
         <div className="max-w-6xl mx-auto px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Ready to Transform Your Student Management?
+            Ready to Transform Your KidCare Management?
           </h2>
           <p className="text-xl mb-8">
-            Join thousands of educational institutions already using our
-            platform
+            Join thousands of kid care center already using our platform
           </p>
           <Button asChild>
             <Link href={"/contact-us"}>Get Started Today</Link>
