@@ -30,8 +30,6 @@ export default function EnquiriesPage() {
     fetchEnquiriesData();
   }, []);
 
-  console.log(enquiries);
-
   return (
     <div className="container mx-auto p-6">
       <div className="mb-8">
