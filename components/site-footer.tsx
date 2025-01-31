@@ -14,8 +14,9 @@ export default function SiteFooter() {
               <Logo type="dark" />
             </div>
             <p className="text-sm text-white/90">
-              From admissions to academics, simplify every aspect of school
-              administration with our comprehensive and user-friendly platform.
+              Schoolscout simplify every aspect of daycare management—from
+              enrollment and attendance tracking to billing and parent
+              communication—with our comprehensive and user-friendly platform.
             </p>
             {/* <div className="flex space-x-4">
               <Link

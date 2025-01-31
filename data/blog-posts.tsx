@@ -1,5 +1,8 @@
+
+
 export interface BlogPost {
   id: string;
+  slug:string;
   title: string;
   excerpt: string;
   content: string;
@@ -13,6 +16,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: "1",
+    slug:"Transforming-Early-Education-with-Preschool-Management-System",
     title: "Transforming Early Education with a Preschool Management System",
     excerpt:
       "The evolution of education led to the emergence of coaching institutes at every corner of the city. Coaching centers help students as they provide guidance so that students can enhance their performance.",
@@ -50,6 +54,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "2",
+    slug:"Why-Your-Preschool-Needs-a-Management-System-Today",
     title: "Why Your Preschool Needs a Management System Today",
     excerpt:
       "Choosing the right educational ERP software is crucial for modern educational institutions.",
@@ -90,6 +95,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "3",
+    slug:"Top-5-Features-to-Look-for-in-a-Preschool-Management-System",
     title: "Top 5 Features to Look for in a Preschool Management System",
     excerpt:
       "Campus ERP systems are transforming how educational institutions operate.",
@@ -122,6 +128,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "4",
+    slug:"The-Future-of-Preschool-Management-Trends-to-Watch",
     title: "The Future of Preschool Management: Trends to Watch",
     excerpt:
       "Modern university management systems offer numerous benefits for educational institutions.",

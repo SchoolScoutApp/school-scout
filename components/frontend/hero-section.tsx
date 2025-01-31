@@ -17,14 +17,15 @@ export default function HeroSection() {
         <h1
           className={`max-w-4xl p-4 rounded text-4xl font-medium tracking-tight text-sky-950 sm:text-6xl ${classes.banner_heading}`}
         >
-          Your Complete School Management Solution
+          Your Complete Day Care Management Solution
         </h1>
 
         <p
           className={`max-w-2xl text-lg text-sky-900 ${classes.banner_heading}`}
         >
-          From admissions to academics, simplify every aspect of school
-          administration with our comprehensive and user-friendly platform.
+          Schoolscout simplify every aspect of daycare management—from
+          enrollment and attendance tracking to billing and parent
+          communication—with our comprehensive and user-friendly platform.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">

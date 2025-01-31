@@ -11,7 +11,7 @@ const plans = [
     price: "Free",
     yearlyPrice: "Free",
     description:
-      "Perfect for small schools getting started with digital management.",
+      "Perfect for small kids care center getting started with digital management.",
     priceDescription: "per student/month",
     features: [
       "Up to 500 student accounts",
@@ -33,7 +33,7 @@ const plans = [
 
     priceDescription: "per student/month",
     description:
-      "Ideal for growing schools needing comprehensive management tools.",
+      "Ideal for growing kids care center needing comprehensive management tools.",
     features: [
       "Up to 2000 student accounts",
       "Advanced student & staff management",
@@ -56,7 +56,7 @@ const plans = [
     yearlyPrice: "9999*",
     priceDescription: "contact for pricing",
     description:
-      "Perfect for large schools and districts requiring custom solutions.",
+      "Perfect for large kids care center and districts requiring custom solutions.",
     features: [
       "Unlimited student accounts",
       "Multi-branch management",
