@@ -40,7 +40,11 @@ iTextarea) {
           invalid && invalid.length > 0 && "invalid"
         }`}
       >
-        {label && <label>{label}</label>}
+        {label && (
+          <label>
+            {required && <span className="text-red-500">*</span>} {label}
+          </label>
+        )}
         <textarea
           id={id}
           name={name}

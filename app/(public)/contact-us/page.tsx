@@ -70,12 +70,19 @@ export default function ContactUsForm() {
                       required
                       invalid={state && state.school_name_error}
                     />
-                    <Textarea
+                    <Input
                       label="Your Address"
                       name="address"
                       placeholder="Eg. 123, Main Street, City, Country"
                       required
                       invalid={state && state.address_error}
+                    />
+                    <Textarea
+                      label="Message"
+                      name="message"
+                      placeholder="Write your message here"
+                      required
+                      invalid={state && state.message_error}
                     />
                     <ContactUsSubmit />
                   </form>
