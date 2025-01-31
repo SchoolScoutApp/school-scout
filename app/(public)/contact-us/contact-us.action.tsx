@@ -1,8 +1,8 @@
 "use server";
 
-// import { createSession, login } from "@/services/sessions";
-// import { revalidatePath } from "next/cache";
-// import { redirect } from "next/navigation";
+import { contactUs } from "@/services/public-forms";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 function validateRequired(
   fieldsData: {
@@ -29,7 +29,7 @@ export default async function SubmitContactUs(
   const phone = formData.get("phone")?.toString();
   const school_name = formData.get("school_name")?.toString();
   const address = formData.get("address")?.toString();
-
+  const message = formData.get("message")?.toString();
   const errors = validateRequired([
     {
       element: name,
@@ -51,34 +51,39 @@ export default async function SubmitContactUs(
       element: address,
       fieldName: "address",
     },
+    {
+      element: message,
+      fieldName: "message",
+    },
   ]);
 
   if (Object.keys(errors).length > 0) {
     return errors;
   }
 
-  console.log("Proceeding to submit contact us form");
+  if (name && email && phone && school_name && address && message) {
+    const response = await contactUs({
+      name,
+      email,
+      phone,
+      school_name,
+      address,
+      message,
+      status: "new",
+      createdAt: new Date().toISOString(),
+    });
 
-  // const response = await login(email, password);
+    if (!response.ok) {
+      errors.invalid_error =
+        "Invalid Credentials: Please enter a valid email and password";
+    }
 
-  // console.log(response);
+    if (response.ok && response.status === 200) {
+      const contactUsData = await response.json();
+      console.log(contactUsData);
 
-  // if (!response.ok) {
-  //   errors.invalid_error =
-  //     "Invalid Credentials: Please enter a valid email and password";
-  // }
-
-  // if (Object.keys(errors).length > 0) {
-  //   return errors;
-  // }
-
-  // if (response.ok && response.status === 200) {
-  //   const userData = await response.json();
-  //   console.log(userData);
-
-  //   createSession(userData);
-
-  //   revalidatePath("/", "layout");
-  //   redirect("/dashboard");
-  // }
+      revalidatePath("/", "layout");
+      redirect("/thank-you");
+    }
+  }
 }

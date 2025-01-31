@@ -28,8 +28,6 @@ export default async function SubmitLogin(prevState: any, formData: FormData) {
 
   const response = await login(email, password);
 
-  console.log(response);
-
   if (!response.ok) {
     errors.invalid_error =
       "Invalid Credentials: Please enter a valid email and password";
