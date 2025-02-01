@@ -10,7 +10,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { MoreHorizontal, Mail, Copy } from "lucide-react";
+import { MoreHorizontal, Mail, Copy, Phone } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
 import { toast } from "@/hooks/use-toast";
 
@@ -27,7 +27,9 @@ export const columns: ColumnDef<any>[] = [
         <Button
           variant="link"
           className="p-0 h-auto"
-          onClick={() => window.location.href = `mailto:${row.original.email}`}
+          onClick={() =>
+            (window.location.href = `mailto:${row.original.email}`)
+          }
         >
           <Mail className="w-4 h-4 mr-2" />
           {row.original.email}
@@ -63,6 +65,17 @@ export const columns: ColumnDef<any>[] = [
   {
     accessorKey: "phone",
     header: "Phone",
+    cell: ({ row }) => (
+      <div className="max-w-[150px] truncate" title={row.original.phone}>
+        <a
+          href={`tel:${row.original.phone}`}
+          className="text-blue-500 flex items-center gap-2"
+        >
+          <Phone className="w-4 h-4 mr-" />
+          {row.original.phone}
+        </a>
+      </div>
+    ),
   },
   {
     accessorKey: "message",
@@ -95,7 +108,9 @@ export const columns: ColumnDef<any>[] = [
     accessorKey: "createdAt",
     header: "Received",
     cell: ({ row }) => {
-      return formatDistanceToNow(new Date(row.original.createdAt), { addSuffix: true });
+      return formatDistanceToNow(new Date(row.original.createdAt), {
+        addSuffix: true,
+      });
     },
   },
   {
@@ -110,19 +125,27 @@ export const columns: ColumnDef<any>[] = [
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Actions</DropdownMenuLabel>
-            <DropdownMenuItem onClick={() => window.location.href = `mailto:${row.original.email}`}>
+            <DropdownMenuItem
+              onClick={() =>
+                (window.location.href = `mailto:${row.original.email}`)
+              }
+            >
               Send email
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => {
-              // Add status update logic here
-              console.log("Mark as contacted", row.original.id);
-            }}>
+            <DropdownMenuItem
+              onClick={() => {
+                // Add status update logic here
+                console.log("Mark as contacted", row.original.id);
+              }}
+            >
               Mark as contacted
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => {
-              // Add status update logic here
-              console.log("Mark as closed", row.original.id);
-            }}>
+            <DropdownMenuItem
+              onClick={() => {
+                // Add status update logic here
+                console.log("Mark as closed", row.original.id);
+              }}
+            >
               Mark as closed
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -130,4 +153,4 @@ export const columns: ColumnDef<any>[] = [
       );
     },
   },
-]; 
+];
