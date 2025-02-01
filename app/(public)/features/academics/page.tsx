@@ -16,51 +16,73 @@ import "aos/dist/aos.css";
 import Image from "next/image";
 
 import academic from "@/assets/images/public-site/academic.jpg";
-import class_mgt from "@/assets/images/public-site/class-mgt.jpg";
-import assignment_mgt from "@/assets/images/public-site/assignment_mgt.jpg";
-import progress_mgt from "@/assets/images/public-site/progress_mgt.png";
+import dashboard_ui from "@/assets/images/public-site/Dashboard_UI_in_SchoolScout.jpg";
+import attendance_tracking from "@/assets/images/public-site/Attendance_Tracking_with_SchoolScout.jpg";
+import invoice_and_billing from "@/assets/images/public-site/Invoice_and_Billing_Management_in_SchoolScout.jpg";
 import communication from "@/assets/images/public-site/communication.png";
-import lab from "@/assets/images/public-site/lab.png";
-import teacher from "@/assets/images/public-site/teacher.png";
+import child_profile_management from "@/assets/images/public-site/Child_Profile_Management_in_SchoolScout.jpg";
+import staff_management from "@/assets/images/public-site/Staff_Manageme_SchoolScout.jpg";
+import event_activity_management from "@/assets/images/public-site/event_manager_13.jpg";
+import security_compliance from "@/assets/images/public-site/Data_security_26.jpg";
+import feedback from "@/assets/images/public-site/Feedback.jpg";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const features_recommended = [
   {
-    title: "Day care Management",
+    title: "Dashboard UI in SchoolScout",
     description:
-      "Streamlined assignment system with deadline tracking, rubric-based grading, plagiarism detection, and detailed feedback mechanisms.",
-    image: class_mgt,
+      " A centralized interface in SchoolScout displaying key metrics like enrolled children, staff, pending payments, and notifications. It includes quick actions for check-in/out, adding children, messaging parents, and generating reports, with role-based access for admins, teachers, and parents.",
+
+    image: dashboard_ui,
   },
   {
-    title: "Assignment Management",
+    title: "Attendance Tracking with SchoolScout",
     description:
-      "Organized course content with downloadable lecture slides, supplementary readings, multimedia resources, and revision guides accessible across all devices.",
-    image: assignment_mgt,
+      "Provides QR code or RFID-based check-in/out using badges or the SchoolScout mobile app, along with a manual button-based check-in/out option for quick updates. Features a real-time attendance dashboard in SchoolScout to monitor present, absent, and late arrivals efficiently.",
+    image: attendance_tracking,
   },
   {
-    title: "Student Progress",
+    title: "Invoice and Billing Management in SchoolScout",
     description:
-      "Detailed performance analytics with progress tracking, achievement milestones, and personalized learning paths based on individual student needs.",
-    image: progress_mgt,
+      "Automates invoice generation in SchoolScout for tuition and extra services, integrates online payments, and manages discounts/late fees. Includes expense and profit tracking for financial oversight.",
+    image: invoice_and_billing,
   },
   {
-    title: "Communications",
+    title: "Daily Reports & Logs for Parents in SchoolScout",
     description:
-      "Seamless communication channels with instant notifications, discussion boards, and direct messaging for quick resolution of student queries.",
+      "Provides daily updates in SchoolScout on meals, naps, and activities through photos/videos. Includes health/incident reports and a messaging system for direct parent-staff communication.",
     image: communication,
   },
   {
-    title: "Lab Sessions",
+    title: "Child Profile Management in SchoolScout",
     description:
-      "Virtual laboratory environment with interactive simulations, step-by-step experimental guides, and real-time collaboration tools.",
-    image: lab,
+      "Stores personal details, medical records, and classroom assignments in SchoolScout. Tracks allergies, emergency contacts, and developmental needs for personalized care.",
+    image: child_profile_management,
   },
   {
-    title: "Extra Help",
+    title: "Staff Management in SchoolScout",
     description:
-      "Supplementary learning support through recorded tutorials, one-on-one consultation sessions, and additional practice materials.",
-    image: teacher,
+      "Manages staff schedules, payroll, and certifications in SchoolScout. Ensures compliance with background checks and tracks work hours, bonuses, and deductions.",
+    image: staff_management,
+  },
+  {
+    title: "Event & Activity Management in SchoolScout",
+    description:
+      "Maintains an event calendar in SchoolScout for activities, birthdays, and holidays. Sends parent invitations and securely shares photos/videos of events.",
+    image: event_activity_management,
+  },
+  {
+    title: "Security & Compliance in SchoolScout",
+    description:
+      "Integrates CCTV in SchoolScout for live-streaming (optional), tracks visitor access, and includes an emergency alert system to notify parents and staff during critical situations.",
+    image: security_compliance,
+  },
+  {
+    title: "Parent Engagement & Feedback in SchoolScout",
+    description:
+      " Enhances parent involvement through a dedicated feedback system in SchoolScout, allowing parents to share suggestions, rate services, and participate in surveys. Includes a community board for announcements, tips, and discussions to foster collaboration between parents and staff.",
+    image: feedback,
   },
 ];
 interface ResourceCard {
@@ -73,35 +95,36 @@ interface ResourceCard {
 const resources: ResourceCard[] = [
   {
     icon: <Book className="w-8 h-8 text-blue-600" />,
-    title: "Digital Library",
-    description: "Access thousands of digital resources anytime, anywhere",
+    title: "Plan Daily Activities with Ease",
+    description:
+      "With SchoolScout, caregivers can design and modify schedules for different age groups, ensuring a balanced mix of structured learning, free play, and rest.",
     items: [
-      "E-books and journals",
-      "Research papers",
-      "Academic publications",
-      "Historical archives",
+      " Playtime Scheduling – Allocate time for indoor and outdoor activities, group games, and social interaction.",
+      "Learning Sessions – Organize age-appropriate lessons, storytime, and hands-on activities.",
+      " Creative Time – Plan activities like drawing, crafts, and music sessions to boost creativity.",
     ],
   },
   {
     icon: <Laptop className="w-8 h-8 text-blue-600" />,
-    title: "Online Classes",
-    description: "Interactive virtual learning environments",
+    title: "Meals & Nap Time Management",
+    description:
+      "Maintaining a proper eating and resting schedule is crucial for children's well-being. SchoolScout allows caregivers to:",
     items: [
-      "Live streaming lectures",
-      "Recorded sessions",
-      "Virtual labs",
-      "Interactive workshops",
+      "Set Meal Times – Schedule breakfast, lunch, and snack breaks, ensuring balanced nutrition.",
+      "Track Nap Schedules – Allocate rest time based on age groups and track sleep patterns.",
+      "Send Parent Updates – Notify parents about mealtime and nap schedules through the SchoolScout Parent Portal.",
     ],
   },
   {
     icon: <BookOpen className="w-8 h-8 text-blue-600" />,
-    title: "Study Materials",
-    description: "Comprehensive learning resources for all subjects",
+    title: "Historical Archives & Progress Tracking",
+    description:
+      "SchoolScout provides a historical record of past schedules, allowing administrators to analyze and refine daycare routines.",
     items: [
-      "Course notes",
-      "Practice exercises",
-      "Past exam papers",
-      "Study guides",
+      " Access Previous Schedules – Review and adjust recurring schedules based on effectiveness.",
+      "Track Engagement Levels – Monitor child participation in activities and adjust accordingly.",
+      "Generate Reports – Create detailed reports on attendance, meal consumption, and activity participation.",
+      "Parent Insights – Share daily activity logs with parents to keep them involved.",
     ],
   },
 ];
@@ -126,11 +149,12 @@ const AcademicManagement = () => {
         <div className="absolute inset-0 bg-sky-900/60 flex items-center justify-center">
           <div className="text-white text-center max-w-4xl px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Modern Academic Management System
+              Activity Planner Feature – Simplify Your Daycare Scheduling
             </h1>
             <p className="text-xl md:text-2xl">
-              Empowering education through digital resources, virtual
-              classrooms, and comprehensive study materials
+              Our Activity Planner helps daycare centers seamlessly organize and
+              manage daily routines, ensuring a structured and engaging
+              environment for children.
             </p>
           </div>
         </div>
@@ -166,10 +190,15 @@ const AcademicManagement = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Academic Resources</h2>
+            <h2 className="text-3xl font-bold mb-4">
+              Customizable Daily Schedules in DCMS – Plan, Track, and Optimize
+              Daily Routines
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Everything you need for successful learning and teaching in one
-              place
+              The Customizable Daily Schedules feature in SchoolScout helps
+              daycare centers efficiently manage daily routines while ensuring a
+              structured, engaging, and developmentally appropriate experience
+              for every child.
             </p>
           </div>
 
@@ -202,7 +231,7 @@ const AcademicManagement = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16">
-            Recommended Features
+            Our 9 key Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features_recommended.map((item, index) => (
@@ -229,10 +258,14 @@ const AcademicManagement = () => {
       {/* CTA Section */}
       <section className="bg-sky-50 text-sky-700 py-20">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Start Learning Today</h2>
+          <h2 className="text-3xl font-bold mb-6">
+            Start Managing Smarter Today!
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Access our comprehensive academic resources and take your learning
-            experience to the next level
+            Access SchoolScout’s comprehensive daycare management tools and take
+            your childcare operations to the next level. Whether you're an
+            admin, teacher, or parent, our system is designed to simplify
+            attendance tracking, billing, communication, and more.
           </p>
           <div className="space-x-4">
             <Button
