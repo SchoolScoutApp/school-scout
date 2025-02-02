@@ -17,9 +17,8 @@ export default function page() {
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-600">
-              Streamline your entire school operations with our comprehensive
-              suite of integrated modules designed specifically for modern
-              educational institutions.
+              SchoolScout simplify Daycare Management—From Enrollment to
+              Billing, All in One Platform.
             </p>
           </div>
           <HelpUs />

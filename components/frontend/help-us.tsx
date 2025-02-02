@@ -24,67 +24,136 @@ const FAQSection: React.FC = () => {
   };
 
   const faqData: FAQData = {
-    "Student Management": [
+    General: [
       {
-        question: "How do I enroll a new student?",
+        question: "What is SchoolScout?",
         answer:
-          'To enroll a new student, navigate to the "Student Management" section and click on "New Admission." Fill in all required fields including personal details, parent/guardian information, and previous academic records. Upload necessary documents (birth certificate, transfer certificate, etc.) and submit the form. The system will generate a unique student ID upon successful enrollment.',
+          "SchoolScout is a comprehensive daycare management system designed to streamline operations for daycare centers. It includes features like attendance tracking, billing, parent communication, staff management, and more, all in one platform.",
       },
       {
-        question: "How can I view a student's attendance record?",
-        answer:
-          'Access the "Attendance" module and enter the student\'s ID or name. You can view daily, monthly, or term-wise attendance records. The system also displays attendance percentage and flags students with attendance below the required threshold.',
+        question: "Who can use SchoolScout?",
+        answer: `SchoolScout is designed for:
+
+        Admins: To manage daycare operations.
+        
+        Teachers: To track attendance and communicate with parents.
+        
+        Parents: To stay updated on their child’s activities and pay fees.`,
       },
       {
-        question: "How do I generate a student progress report?",
+        question: "Is SchoolScout secure?",
         answer:
-          'Go to "Academic Records" → "Progress Reports." Select the student, class, and term/semester. The system will compile all academic data including grades, attendance, and teacher comments into a comprehensive report that can be exported as PDF.',
+          "Yes! SchoolScout uses data encryption, role-based access, and compliance with privacy regulations (e.g., GDPR, COPPA) to ensure data security.",
+      },
+
+      {
+        question: "Is there a mobile app for SchoolScout?",
+        answer:
+          "Yes! SchoolScout offers mobile apps for iOS and Android, allowing parents and staff to access features on the go.",
+      },
+
+      {
+        question: "Can I try SchoolScout before purchasing?",
+        answer:
+          "Yes, we offer a free trial with no credit card required. Sign up on our website to get started.",
+      },
+
+      {
+        question: "What kind of support does SchoolScout provide?",
+        answer:
+          "We offer 24/7 support via email, chat, and phone. Our team is always ready to assist with setup, troubleshooting, or any questions.",
+      },
+    ],
+    "Kids Management": [
+      {
+        question: "How do I add a new child to the system?",
+        answer:
+          "Admins or teachers can add a new child by entering their personal details, medical records, and classroom assignment in the Child Profile section.",
+      },
+      {
+        question: "Can I track a child’s daily activities?",
+        answer:
+          "Yes! Teachers log daily activities, meals, naps, and incidents, which parents can view in real-time.",
+      },
+      {
+        question: "How are allergies and medical conditions managed?",
+        answer:
+          "Each child’s profile includes a section for allergies, medications, and special needs. Teachers and staff are notified to ensure proper care.",
+      },
+
+      {
+        question: "Can I group children by age or developmental level??",
+        answer:
+          "Yes, children can be assigned to classrooms or groups based on age, developmental level, or other criteria.",
       },
     ],
     "Fee Management": [
       {
-        question: "How do I generate fee invoices?",
+        question: "How are fees calculated in SchoolScout?",
         answer:
-          'Navigate to "Fee Management" → "Generate Invoice." Select the class/grade level and fee structure. You can generate invoices for individual students or bulk generate for an entire class. The system automatically applies any applicable discounts or scholarships.',
+          "Fees are auto-calculated based on tuition, extra services (e.g., meals, activities), and any applicable discounts or late fees.",
       },
       {
-        question: "What payment methods are accepted?",
+        question: "Can parents pay fees online?",
         answer:
-          "The system supports multiple payment methods including online payment through integrated payment gateway, bank transfer, cash payment at school, and cheque deposit. All payments are automatically recorded and receipts are generated instantly.",
+          "Yes! SchoolScout integrates with online payment gateways like credit/debit cards, UPI, PayPal, and more.",
       },
       {
-        question: "How can parents view fee dues?",
+        question: "How are late fees handled?",
         answer:
-          'Parents can log into their portal using their credentials and access the "Fee Details" section. They can view current dues, payment history, and download fee receipts. The system sends automatic reminders for pending payments.',
+          "Late fees are automatically applied to overdue payments based on predefined rules. Admins can adjust or waive late fees if needed.",
+      },
+
+      {
+        question: "Can I generate fee receipts and invoices?",
+        answer: `Teachers can:Track attendance (check-in/out).
+                 Log daily activities, meals, and naps.Communicate with parents.
+                 View classroom schedules and event calendars.`,
       },
     ],
     "Teacher Portal": [
       {
-        question: "How do teachers mark attendance?",
+        question: "What features are available in the Teacher Portal?",
         answer:
           "Teachers can access the attendance module from their dashboard, select their class/subject, and mark attendance using the simple present/absent toggle. The system also allows backdated attendance marking with proper authorization.",
       },
       {
-        question: "How do teachers upload marks/grades?",
+        question: "How do teachers log attendance?",
         answer:
-          'In the "Academics" section, teachers can select their subject and class, then input marks either individually or through bulk upload using the provided Excel template. The system automatically calculates grades based on the defined grading policy.',
+          "Teachers can use QR codes, RFID badges, or manual check-in/out buttons to log attendance in real-time.",
       },
       {
         question: "Can teachers communicate with parents through the system?",
         answer:
           'Yes, teachers can send individual messages or broadcast announcements to parents through the "Communication" module. They can also schedule parent-teacher meetings and share student-specific notes.',
       },
+      {
+        question: "Can teachers send updates to parents?",
+        answer:
+          "Yes, teachers can send daily reports, activity logs, and incident reports directly to parents.",
+      },
+
+      {
+        question: "How do teachers access the portal?",
+        answer:
+          "Teachers can log in via the web portal or mobile app using their unique credentials.",
+      },
     ],
     "Parent Portal": [
       {
-        question: "How do parents access their child's academic progress?",
-        answer:
-          "Parents can log in to their dedicated portal using their credentials. The dashboard displays comprehensive information including current academic performance, attendance records, upcoming assignments and tests, teacher feedback and comments, and fee payment status.",
+        question: " What can parents access in the portal?",
+        answer: `Parents can:View their child’s attendance, daily reports, and activity logs.Pay fees and view invoices.Communicate with teachers.Receive event invitations and notifications.`,
       },
       {
-        question: "How can parents apply for leave for their child?",
+        question: "How do parents receive updates about their child?",
         answer:
-          'Parents can submit leave applications through "Leave Management" by specifying the dates and reason. The class teacher will be notified automatically and can approve/reject the request through the system.',
+          "Parents receive real-time updates via the mobile app, email, or SMS.",
+      },
+
+      {
+        question: "Is the Parent Portal available on mobile?",
+        answer:
+          "Yes, the SchoolScout mobile app is available for iOS and Android devices.",
       },
     ],
     "System Access": [
@@ -103,7 +172,7 @@ const FAQSection: React.FC = () => {
       {
         question: "Who do I contact for technical support?",
         answer:
-          "For technical issues, contact our support team via email at support@schoolsystem.edu. Help Desk is available 8 AM - 5 PM (Monday-Friday), with emergency support available for critical system issues.",
+          "For technical issues, contact our support team via email at schoolscoutindia@gmail.com Help Desk is available 8 AM - 5 PM (Monday-Friday), with emergency support available for critical system issues.",
       },
       {
         question: "Is my data secure in the system?",
@@ -122,7 +191,7 @@ const FAQSection: React.FC = () => {
     <div className="w-full max-w-4xl mx-auto p-6">
       <div className="bg-white rounded-lg shadow-lg p-6">
         <h1 className="text-2xl font-bold text-center mb-6">
-          School Management System FAQ
+          Daycare Management System FAQ
         </h1>
 
         <div className="space-y-6">
