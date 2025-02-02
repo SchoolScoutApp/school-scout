@@ -262,9 +262,9 @@ const AcademicManagement = () => {
             Start Managing Smarter Today!
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Access SchoolScout’s comprehensive daycare management tools and take
-            your childcare operations to the next level. Whether you're an
-            admin, teacher, or parent, our system is designed to simplify
+            Access SchoolScout&#39;s comprehensive daycare management tools and
+            take your childcare operations to the next level. Whether you&#39;re
+            an admin, teacher, or parent, our system is designed to simplify
             attendance tracking, billing, communication, and more.
           </p>
           <div className="space-x-4">
